@@ -25,13 +25,7 @@ Route::controllers([
 
 Route::get('/', function()
 {
-	$casas= App\Casa::where('estatus', '=', '1')
-                    ->get();
-    $i='1';
-    $i2='1';
-    return View::make('index')->with ('i', $i)
-                              ->with ('casas', $casas)
-                              ->with ('i2', $i2);
+	return 'hi';
 });
 
 Route::get('/nosotros', function()
@@ -226,7 +220,17 @@ Route::get('/casa/{id}', function($id)
 });
 
 
+Route::post('/meinteresa', function()
+{
+    $data=$request->all();
 
+    Mail::send('mailficha', $data, function($message) {
+        $recipient_email = $->email;
+        $recipient_name  = $user->first_name.' '.$user->last_name;
+        $subject  = 'Welcome '.$user->first_name.'!';
+    return $id;
+});
+}
 
 Route::get('/crear_casa', function()
 {
