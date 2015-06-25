@@ -1,0 +1,206 @@
+body{
+	background: url(../images/cream_pixels.png) repeat 0 0;
+	color:black;
+}
+
+div.col-md-10{
+	padding-top:1%;
+}
+
+
+ul.list-inline{
+	text-align: center;
+}
+
+div.icono{
+	padding-right: 20%;
+}
+
+div.tituloicono{
+	padding-right: 20%;
+}
+
+div.iconotitulo{
+	text-align: center;
+}
+
+h3.tituloicono{
+	text-align: center;
+	text-transform: capitalize;
+	color: #C72481;
+	font-weight: bold;
+}
+
+h3.tituloficha{
+	text-align: center;
+	text-transform: capitalize;
+	color: #C72481;
+	font-weight: bold;
+}
+
+h3.icono{
+	text-align: center;
+}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	max-width: 100%;
+}
+
+.btn-primary{
+	background-color: #74C5B6;
+	border-color: #74C5B6;
+}
+
+.btn-primary:hover{
+	background-color: #89C83B;
+	border-color: #89C83B;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+	vertical-align: middle;
+}
+#map-container { 
+	height: 300px; 
+}
+
+h3#nocasas{
+	text-align: center;
+}
+
+img#undconst{
+	height:100%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*nav bar*/
+div.navbar{
+	background-color: #623296 ;
+	text-align: right;
+}
+
+.navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus{
+	color: #327FB2;
+	font-weight:bold;
+	font-size:150%;
+	background-color: #623296;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: white;
+	font-weight:bold;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+	color: #327FB2;
+	font-weight:bold;
+}
+
+.navbar-default .navbar-nav>li>a.user{
+	color:#327FB2;
+}
+
+.navbar-default .navbar-nav>li>a.user:hover{
+	color: white;
+	font-weight:bold;
+}
+/*end of navbar*/
+
+/*line in navbar*/
+hr{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+/*end of line in navbar*/
+
+/*font in webpage*/
+h1, h2, h3, h4, h5, h6, p, div{
+	font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+/*end of fonts*/
+
+h2{
+	padding-left:8%;
+}
+
+h2#contacto{
+	text-align: center;
+}
+
+h1#h1user{
+	padding-left:5%;
+}
+
+h1#registro{
+	text-align: center;
+}
+
+
+p#plaintext{
+	padding-left:10%;
+	padding-right:10%;
+}
+
+ul#plaintext{
+	padding-left:11%;
+}
+
+p#gracias{
+	text-align: center;
+	font-size:20px;
+}
+
+p#pregistro{
+	text-align:center;
+}
+
+/*accordion style*/
+div#accordion.panel-group{
+	padding-left:10%;
+	padding-right:10%;
+}
+
+.panel-default{
+	border-color:#327FB2;
+}
+
+.panel-default>.panel-heading{
+	background-image:url(../images/cream_pixels.png);
+}
+
+.panel-group .panel{
+	margin-bottom:2%;
+}
+/*end of accordion styñle*/
+
+/*form style*/
+label, textarea{
+	display:block;
+}
+
+form#auth{
+	padding-left: 10%;
+}
+/*end form style*/
+
+/*alert style*/
+.alert-info{
+	text-align: center;
+}
+/*end alert style*/
+
+div#registros{
+	text-align: center;
+}
+
+
+
+
