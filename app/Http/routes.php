@@ -25,7 +25,7 @@ Route::controllers([
 
 Route::get('/', function()
 {
-	return 'hi';
+	return 'hola';
 });
 
 Route::get('/nosotros', function()
@@ -220,7 +220,7 @@ Route::get('/casa/{id}', function($id)
 });
 
 
-Route::post('/meinteresa', function()
+/*Route::post('/meinteresa', function()
 {
     $data=$request->all();
 
@@ -231,7 +231,7 @@ Route::post('/meinteresa', function()
     return $id;
 });
 }
-
+*/
 Route::get('/crear_casa', function()
 {
 	$zonas= DB::table('zonas')->orderby('zona', 'asc')->lists('zona', 'id');
