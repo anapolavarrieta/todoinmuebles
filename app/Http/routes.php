@@ -688,8 +688,38 @@ Route::get('/practice-creating-ambiente', function() {
 
     # Set 
     $ambiente->name = 'Terraza';
-    
 
+
+    # This is where the Eloquent ORM magic happens
+    $ambiente->save();
+
+    # Instantiate a new Casa model class
+    $ambiente = new App\Ambiente();
+
+    # Set 
+    $ambiente->name = 'Amueblado';
+
+    
+    # This is where the Eloquent ORM magic happens
+    $ambiente->save();
+
+    # Instantiate a new Casa model class
+    $ambiente = new App\Ambiente();
+
+    # Set 
+    $ambiente->name = 'Balcón';
+
+    
+    # This is where the Eloquent ORM magic happens
+    $ambiente->save();
+
+    # Instantiate a new Casa model class
+    $ambiente = new App\Ambiente();
+
+    # Set 
+    $ambiente->name = 'Semi-amueblado';
+
+    
     # This is where the Eloquent ORM magic happens
     $ambiente->save();
     return 'A new house has been added! Check your database to see...';
