@@ -303,16 +303,14 @@ Route::get('/crear_zona', function()
 
 Route::post('/crear_zona',function()
 {
-	$zona=new App\Zona();$zona->zona="Contadero";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
+	
 
  	return 'Se ha creado la zona';
 });
 
 Route::get('/editar_zona', function()
 {
-    $zona= App\zona::find(4);
-    $zona->zona='Hacienda San Martin';
-    $zonas->save();
+    $zona=new App\Zona();$zona->zona="Contadero";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
     return 'Se edito';
 });
 
