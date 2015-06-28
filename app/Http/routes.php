@@ -310,7 +310,26 @@ Route::post('/crear_zona',function()
 
 Route::get('/editar_zona', function()
 {
-    $zona=new App\Zona();$zona->zona="Contadero";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Lomas de Vistahermosa";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Lomas de Memetla";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Hacienda San Martin";  $zona->delegacion="Ocoyoacac"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Olivar de los Padres";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Paseo de las Lomas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Lomas de las Aguilas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Lomas de Guadalupe";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Santa Fe";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="San Bartolo Ameyalco";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Las Aguilas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Bosques de Tarango";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="AmpliaciÃ³n Las Aguilas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Del Valle Sur";  $zona->delegacion="Benito JuÃ¡rez"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Lomas Altas";  $zona->delegacion="MiguÃ©l Hidalgo"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="AnÃ¡huac";  $zona->delegacion="MiguÃ©l Hidalgo"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Lomas Quebradas";  $zona->delegacion="La Magdalena Contreras"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Interlomas";  $zona->delegacion="Huixquilucan"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Tetelpan";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Letran Valle";  $zona->delegacion="Benito JuÃ¡rez"; $zona->save(); 
+$zona=new App\Zona();$zona->zona="Cuajimalpa";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
     return 'Se edito';
 });
 
