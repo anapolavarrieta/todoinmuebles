@@ -303,10 +303,8 @@ Route::get('/crear_zona', function()
 
 Route::post('/crear_zona',function()
 {
-	$zona=new App\Zona();
-	$zona->zona=Input::get('zona');
-    $zona->delegacion=Input::get('delegacion');
-	$zona->save(); 
+	$zona=new App\Zona();$zona->zona="Contadero";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
+
  	return 'Se ha creado la zona';
 });
 
