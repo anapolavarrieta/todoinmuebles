@@ -310,26 +310,63 @@ Route::post('/crear_zona',function()
 
 Route::get('/editar_zona', function()
 {
-$zona=new App\Zona();$zona->zona="Lomas de Vistahermosa";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Lomas de Memetla";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Hacienda San Martin";  $zona->delegacion="Ocoyoacac"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Olivar de los Padres";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Paseo de las Lomas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Lomas de las Aguilas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Lomas de Guadalupe";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Santa Fe";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="San Bartolo Ameyalco";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Las Aguilas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Bosques de Tarango";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="AmpliaciÃ³n Las Aguilas";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Del Valle Sur";  $zona->delegacion="Benito JuÃ¡rez"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Lomas Altas";  $zona->delegacion="MiguÃ©l Hidalgo"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="AnÃ¡huac";  $zona->delegacion="MiguÃ©l Hidalgo"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Lomas Quebradas";  $zona->delegacion="La Magdalena Contreras"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Interlomas";  $zona->delegacion="Huixquilucan"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Tetelpan";  $zona->delegacion="Alvaro ObregÃ³n"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Letran Valle";  $zona->delegacion="Benito JuÃ¡rez"; $zona->save(); 
-$zona=new App\Zona();$zona->zona="Cuajimalpa";  $zona->delegacion="Cuajimalpa de Morelos"; $zona->save(); 
+    $zona= App\Zona::find(5);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(6);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(7);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(8);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(9);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(10);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(11);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(12);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(13);
+    $zona->zona= "Ampliación de las Aguilas";
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(14);
+    $zona->delegacion= 'Benito Juárez';
+    $zona->save();
+
+    $zona= App\Zona::find(15);
+    $zona->delegacion= 'Miguel Hidalgo';
+    $zona->save();
+
+    $zona= App\Zona::find(16);
+    $zona->zona= "Anáhuac";
+    $zona->delegacion= 'Miguel Hidalgo';
+    $zona->save();
+
+    $zona= App\Zona::find(19);
+    $zona->delegacion= 'Alvaro Obregón';
+    $zona->save();
+
+    $zona= App\Zona::find(20);
+    $zona->delegacion= 'Benito Juárez';
+    $zona->save();
     return 'Se edito';
 });
 
