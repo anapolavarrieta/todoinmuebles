@@ -229,7 +229,7 @@ Route::get('/casa/{id}', function($id)
 Route::post('/meinteresa', function()
 {
    
-    $visitor_email= Input::get('email');;
+    $visitor_email= Input::get('email');
 
 
     $email_from="info@todoinmuebles.com.mx";
@@ -241,7 +241,7 @@ Route::post('/meinteresa', function()
     $headers .= "Reply-To: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
     
-    return "Gracias"; 
+    return "Gracias" $visitor_email; 
 });
 
 
