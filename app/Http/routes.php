@@ -215,18 +215,8 @@ Route::post('/meinteresa', function()
    $id = Input::get('id');
    $casa = App\Casa::findOrFail($id);
    $promoemail= $casa->servicios->lists('email');
-   $zona = Input::get('zona');
-   $tipo = Input::get('tipo');
-   $compra = Input::get('compra');
-   $email= Input::get('email');
-   Mail::send('emails.ficha', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra], function($message) use ($email) {
-            $message->to($email)
-            ->subject('Gracias por tu interes');
-    });
 
-  
-    
-    return  View::make('gracias'); 
+    return  $promoemail; 
 });
 
 
