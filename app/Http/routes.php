@@ -215,8 +215,21 @@ Route::post('/meinteresa', function()
    $id = Input::get('id');
    $casa = App\Casa::findOrFail($id);
    $promoemail= $casa->servicios->lists('email');
+   $zona = Input::get('zona');
+   $tipo = Input::get('tipo');
+   $compra = Input::get('compra');
+   $email= Input::get('email');
+   Mail::send('emails.ficha', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra], function($message) use ($email) {
+            $message->to($email)
+            ->subject('Gracias por tu interes');
+    });
 
-    return  $promoemail; 
+   Mail::send('emails.promotor', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra, 'email'=>$email], function($message) use ($promoemail) {
+            $message->to($promoemail)
+            ->subject('Contacto interesado en propiedad');
+    });
+    
+    return  View::make('gracias'); 
 });
 
 
