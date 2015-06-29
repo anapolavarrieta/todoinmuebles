@@ -15,8 +15,8 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => env('MAILGUN_DOMAIN'),
-		'secret' => env('MAILGUN_SECRET'),
+		'domain' => 'todoinmuebles.com.mx',
+		'secret' => 'key-c277c9e96817215f8d8cc43073595950',
 	],
 
 	'mandrill' => [

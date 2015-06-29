@@ -284,8 +284,8 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(43);
-    $casa->servicios()->attach(18);
+    $casa= App\Casa::find(2);
+    $casa->servicios()->attach(13);
     $casa->save();
     return 'Se edito';
 });
