@@ -226,18 +226,25 @@ Route::get('/casa/{id}', function($id)
 });
 
 
-/*Route::post('/meinteresa', function()
+Route::post('/meinteresa', function()
 {
-    $data=$request->all();
+   
+    $visitor_email= Input::get('email');;
 
-    Mail::send('mailficha', $data, function($message) {
-        $recipient_email = $->email;
-        $recipient_name  = $user->first_name.' '.$user->last_name;
-        $subject  = 'Welcome '.$user->first_name.'!';
-    return $id;
+
+    $email_from="info@todoinmuebles.com.mx";
+    $email_subject="Interes casa";
+    $email_body="Recibiste un nuevo mensaje de name.\n". "Su correo es: $visitor_email.\n". "Su teléfono: phone.\n". "Su mensaje: message";
+
+    $to="anapolavarrieta@gmail.com";
+    $headers= "From: $email_from \r\n";
+    $headers .= "Reply-To: $visitor_email \r\n";
+    mail($to,$email_subject,$email_body,$headers);
+    
+    return "Gracias"; 
 });
-}
-*/
+
+
 Route::get('/crear_casa', function()
 {
 	$zonas= DB::table('zonas')->orderby('zona', 'asc')->lists('zona', 'id');
