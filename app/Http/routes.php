@@ -44,37 +44,20 @@ Route::get('/contacto', function()
 	return View::make('contacto');
 });
 
-Route::post('/contacto',
-	array(
-		function(){
-		$name= Input::get('client');
-		$email= Input::get('email');
-		$phone= Input::get('phone');
-		$message=Input::get('message');
-		
-		$user= array(
-			'email'=>$email,
-			'name'=>$name,
-		);
-
-		$data = array(
-			'email'=>$email,
-			'name'=>$name,
-			'phone'=>$phone,
-			'detail'=>$message
-		);
-
-		Mail::send('mailcontacto', $data, function($message) use($data)
-		{
-			$message->to('anapolavarrieta@gmail.com', 'Ana Paula')
-					->subject('Nueva información de contacto');
-		});
-
-		/*return View::make('gracias');*/
-
-		return $data;
-	})
-);
+Route::post('/contacto', function()
+{
+   $client = Input::get('client');
+   $email = Input::get('email');
+   $phone = Input::get('phone');
+   $inmueble = Input::get('inmueble');
+   $bodymessage = Input::get('message');
+   Mail::send('emails.contacto', ['client'=> $client, 'email'=>$email, 'phone'=>$phone, 'inmueble'=>$inmueble, 'bodymessage'=>$bodymessage], function($message) {
+    $message->to('anapolavarrieta@gmail.com')
+            ->subject('Contacto interesado');
+        });
+    
+    return  View::make('gracias'); 
+});
 
 /*VENTA/RENTA/PRE-VENTA */
 Route::get('/{compra}', function($compra)
@@ -229,19 +212,24 @@ Route::get('/casa/{id}', function($id)
 Route::post('/meinteresa', function()
 {
    
-    $visitor_email= Input::get('email');
+   $id = Input::get('id');
+   $casa = App\Casa::findOrFail($id);
+   $promoemail= $casa->servicios->lists('email');
+   $zona = Input::get('zona');
+   $tipo = Input::get('tipo');
+   $compra = Input::get('compra');
+   $email= Input::get('email');
+   Mail::send('emails.ficha', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra], function($message) use ($email) {
+            $message->to($email)
+            ->subject('Gracias por tu interes');
+    });
 
-
-    $email_from="info@todoinmuebles.com.mx";
-    $email_subject="Interes casa";
-    $email_body="Recibiste un nuevo mensaje de name.\n". "Su correo es: $visitor_email.\n". "Su teléfono: phone.\n". "Su mensaje: message";
-
-    $to="anapolavarrieta@gmail.com";
-    $headers= "From: $email_from \r\n";
-    $headers .= "Reply-To: $visitor_email \r\n";
-    mail($to,$email_subject,$email_body,$headers);
+   Mail::send('emails.promotor', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra, 'email'=>$email], function($message) use ($promoemail) {
+            $message->to($promoemail)
+            ->subject('Contacto interesado en propiedad');
+    });
     
-    return "Gracias" $visitor_email; 
+    return  View::make('gracias'); 
 });
 
 
@@ -296,9 +284,8 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(32);
-    $casa->lat= '19.339899';
-    $casa->long= '-99.237027';
+    $casa= App\Casa::find(43);
+    $casa->servicios()->attach(18);
     $casa->save();
     return 'Se edito';
 });

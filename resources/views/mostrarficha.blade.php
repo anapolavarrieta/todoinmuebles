@@ -151,6 +151,9 @@
 			</br>
 			{!! Form::open(array('url'=>'/meinteresa'))!!}
 			{!!Form::hidden('id', $casa->id)!!}
+			{!!Form::hidden('zona', $zona)!!}
+			{!!Form::hidden('tipo', $tipo)!!}
+			{!!Form::hidden('compra', $compra)!!}
 			{!!Form::label('email','Ingresa tu correo:')!!}
 			{!!Form::email('email', null, ['class' => 'form-control'])!!}
 			</br>
