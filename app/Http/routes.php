@@ -358,7 +358,19 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(19);
+    $casa= App\Casa::find(12);
+    $casa->estatus = "0";
+    $casa->save();
+
+     $casa= App\Casa::find(17);
+    $casa->estatus = "0";
+    $casa->save();
+
+     $casa= App\Casa::find(18);
+    $casa->estatus = "0";
+    $casa->save();
+
+     $casa= App\Casa::find(19);
     $casa->estatus = "0";
     $casa->save();
     return 'Se edito';
