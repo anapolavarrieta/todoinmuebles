@@ -462,7 +462,7 @@ Route::get('/editar_casa', function()
     $casa->municipio= 'Benito Juárez';
     $casa->save();
 
-    
+
 
 
 
@@ -484,27 +484,27 @@ Route::post('/crear_zona',function()
 
 Route::get('/editar_servicios', function()
 {
-    $servicio= App\Servicio::find(13);
+    $servicio= App\Servicio::find(1);
     $servicio->phone= '5510685454';
     $servicio->save();
 
-    $servicio= App\Servicio::find(14);
+    $servicio= App\Servicio::find(2);
     $servicio->phone= '5516555831';
     $servicio->save();
 
-    $servicio= App\Servicio::find(15);
+    $servicio= App\Servicio::find(3);
     $servicio->phone= '5521097196';
     $servicio->save();
 
-    $servicio= App\Servicio::find(16);
+    $servicio= App\Servicio::find(4);
     $servicio->phone= '5518340035';
     $servicio->save();
 
-    $servicio= App\Servicio::find(17);
+    $servicio= App\Servicio::find(5);
     $servicio->phone= '5526903667';
     $servicio->save();
 
-    $servicio= App\Servicio::find(18);
+    $servicio= App\Servicio::find(6);
     $servicio->phone= '5541354854';
     $servicio->save();
     return 'Se edito';
