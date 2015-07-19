@@ -46,18 +46,45 @@ Route::get('/contacto', function()
 
 Route::post('/contacto', function()
 {
+   
+   $rules = array(
+    'client'=>'required',
+    'email'=> 'required',
+    'phone'=>'required',
+    'message'=>'required'
+   );
+
+    $messages = array(
+        'required' => 'Es necesario ingresar los datos'
+    );
+
+   $validator = Validator::make(Input::all(), $rules,$messages);
+
+   if ($validator->fails()) {
+        $messages = $validator->messages();
+        return Redirect::back()
+            ->withErrors($validator)
+            ->withInput(Input::get());
+    } else {
    $client = Input::get('client');
    $email = Input::get('email');
    $phone = Input::get('phone');
    $inmueble = Input::get('inmueble');
    $bodymessage = Input::get('message');
    Mail::send('emails.contacto', ['client'=> $client, 'email'=>$email, 'phone'=>$phone, 'inmueble'=>$inmueble, 'bodymessage'=>$bodymessage], function($message) {
-    $message->to('anapolavarrieta@gmail.com')
+    $message->to('info@todoinmuebles.com.mx')
             ->subject('Contacto interesado');
         });
     
     return  View::make('gracias'); 
+}
 });
+
+Route::get('/aviso', function()
+{
+    return View::make('aviso');
+});
+
 
 /*VENTA/RENTA/PRE-VENTA */
 Route::get('/{compra}', function($compra)
@@ -72,15 +99,44 @@ Route::get('/{compra}', function($compra)
     {
     $zonas= App\Zona::orderby('zona','asc')->get();
     $i=1;
+    $d=0;
+    $j=0;
     $delegaciones= DB::table('zonas')
                  ->select('delegacion')
                  ->groupBy('delegacion')
                  ->lists('delegacion');
-    return View::make('ventacasa')->with ('zonas', $zonas)
+    if($tipo== 'casa'){
+            $tip= 'C';
+          }
+          elseif($tipo== 'depa'){
+            $tip='D';
+          }
+          else{
+            $tip='T';
+          }
+
+          if($compra== 'venta'){
+            $comp= 'V';
+          }
+          elseif($compra== 'renta'){
+            $comp='R';
+          }
+          else{
+            $comp='PV';
+          }          
+
+          $casas= App\Casa::where('tipo', '=', $tip)
+                                ->where('estado_compra', '=', $comp)
+                                ->where ('estatus', '=', '1')
+                                ->get();
+             return View::make('ventacasa')->with ('zonas', $zonas)
                                   ->with('delegaciones', $delegaciones)
                                   ->with ('tipo', $tipo)
                                   ->with('i',$i)
-                                  ->with('compra', $compra);
+                                  ->with('compra', $compra)
+                                  ->with('casas',$casas)
+                                  ->with('d',$d)
+                                  ->with('j',$j);
     })
     ->where (['compra' => '[a-z]+', 'tipo' => '[a-z]+' ]);
 
@@ -107,12 +163,8 @@ Route::get('/{compra}', function($compra)
             $comp='PV';
           }          
 
-          if($id=='todas'){
+          if($id=='0'){
 		      try{
-                $casas= App\Casa::where('tipo', '=', $tip)
-                                ->where('estado_compra', '=', $comp)
-                                ->where ('estatus', '=', '1')
-                                ->firstOrFail();
                 $casas= App\Casa::where('tipo', '=', $tip)
                                 ->where('estado_compra', '=', $comp)
                                 ->where ('estatus', '=', '1')
@@ -166,7 +218,7 @@ Route::get('/casa/{id}', function($id)
 	try{
 		$casa = App\Casa::findOrFail($id);
         $zona = App\Zona::findOrFail($casa->zona_id);
-
+       
         if($casa->estatus == 0)
             return View::make('nocasas')->with('id','ficha');
 
@@ -211,25 +263,47 @@ Route::get('/casa/{id}', function($id)
 
 Route::post('/meinteresa', function()
 {
+   $id = Input::get('id');  
+   $rules = array(
+    'email'=> 'required',
+    'phone'=>'required'
+   );
+
+    $messages = array(
+        'required' => 'Es necesario ingresar los datos'
+    );
+
+   $validator = Validator::make(Input::all(), $rules,$messages);
+
+   if ($validator->fails()) {
+        $messages = $validator->messages();
+        return Redirect::back()
+            ->withErrors($validator)
+            ->withInput(Input::get());
+    } else {
+
    
-   $id = Input::get('id');
    $casa = App\Casa::findOrFail($id);
    $promoemail= $casa->servicios->lists('email');
    $zona = Input::get('zona');
    $tipo = Input::get('tipo');
    $compra = Input::get('compra');
+   $phone= Input::get('phone');
    $email= Input::get('email');
-   Mail::send('emails.ficha', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra], function($message) use ($email) {
+
+   $pdf= PDF::loadview('emails.ficha', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra]);
+   Mail::send('emails.ficha', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra, 'pdf'=>$pdf], function($message) use ($email, $pdf) {
             $message->to($email)
             ->subject('Gracias por tu interes');
     });
 
-   Mail::send('emails.promotor', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra, 'email'=>$email], function($message) use ($promoemail) {
-            $message->to($promoemail)
+   Mail::send('emails.promotor', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra, 'email'=>$email, 'phone'=>$phone], function($message) use ($promoemail) {
+            $message->to($promoemail)->cc('info@todoinmuebles.com.mx')
             ->subject('Contacto interesado en propiedad');
     });
     
     return  View::make('gracias'); 
+    }
 });
 
 
@@ -284,8 +358,8 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(2);
-    $casa->servicios()->attach(13);
+    $casa= App\Casa::find(19);
+    $casa->estatus = "0";
     $casa->save();
     return 'Se edito';
 });
@@ -300,6 +374,35 @@ Route::post('/crear_zona',function()
 	
 
  	return 'Se ha creado la zona';
+});
+
+
+Route::get('/editar_servicios', function()
+{
+    $servicio= App\Servicio::find(13);
+    $servicio->phone= '5510685454';
+    $servicio->save();
+
+    $servicio= App\Servicio::find(14);
+    $servicio->phone= '5516555831';
+    $servicio->save();
+
+    $servicio= App\Servicio::find(15);
+    $servicio->phone= '5521097196';
+    $servicio->save();
+
+    $servicio= App\Servicio::find(16);
+    $servicio->phone= '5518340035';
+    $servicio->save();
+
+    $servicio= App\Servicio::find(17);
+    $servicio->phone= '5526903667';
+    $servicio->save();
+
+    $servicio= App\Servicio::find(18);
+    $servicio->phone= '5541354854';
+    $servicio->save();
+    return 'Se edito';
 });
 
 Route::get('/editar_zona', function()
@@ -361,8 +464,14 @@ Route::get('/editar_zona', function()
     $zona= App\Zona::find(20);
     $zona->delegacion= 'Benito Juárez';
     $zona->save();
+    
+
+    $zona= App\Zona::find(4);
+    $zona->zona= 'Hacienda San Martín';
+    $zona->save();
     return 'Se edito';
 });
+
 
 Route::get('/crear_ambiente', function()
 {

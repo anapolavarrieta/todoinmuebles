@@ -5,7 +5,8 @@
 
 	<div>
 
-	<h2 style="text-align:center"> El cliente {{$email}} esta interesado en la siguiente propiedad </h2>
+	<h2 style="text-align:center"> El cliente {{$email}} con telefono {{$phone}} esta interesado en la siguiente propiedad </h2>
+
 
 	</div>
 	

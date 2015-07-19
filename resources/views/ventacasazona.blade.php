@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<div class="col-md-10">
-			@if ($id != 'todas')
+			@if ($id != '0')
 				<h1> Zona: {{$zona}} </h1> 
 			@endif
 			<table class='table'>

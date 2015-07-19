@@ -20,16 +20,27 @@
 <!-- Start WOWSlider.com HEAD section -->
 <link rel="stylesheet" type="text/css" href="{{URL::asset('/engine2/style.css')}}" />
 <script type="text/javascript" src="{{URL::asset('/engine2/jquery.js')}}"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- End WOWSlider.com HEAD section -->
 </head>
 
 <body>
 	<div class="container">
+		</br>
 		<div class="row">
-			<div class= "col-md-10">
-				<a href='/' ><img src= "{{URL::asset('/images/logo.jpg')}}" alt="TodoInmuebles Logo"/></a>
-			</div>
+			<div class= "col-md-10 col-xs-7 col-sm-9" >
+		<a href='/' ><img src= "{{URL::asset('/images/logo.jpg')}}" alt="TodoInmuebles Logo"/></a>
 		</div>
+		<div class= "col-md-2 col-xs-6 col-sm-3">
+				</br></br>
+				<a href='https://www.facebook.com/todoinmuebles1'target="_blank" ><img src= "{{URL::asset('/images/facebook.png')}}" alt="TodoInmuebles Logo"/></a>
+				<a href='https://twitter.com/TodoInmuebles1'target="_blank" ><img src= "{{URL::asset('/images/twitter.png')}}" alt="TodoInmuebles Logo"/></a>
+			</div>
+
+		</div>
+		
+		</br>
+		
 		<div class="navbar navbar-default" role="navigation">
 	        <div class="navbar-header">
     		     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -47,10 +58,14 @@
             		<li id="navpart4"><a href='/renta'>Renta</a></li>
 					<li id="navpart5"><a href='/preventa'>Pre-venta</a></li>
 					<li id="navpart5"><a href='/contacto'>Contacto</a></li>
+					<li id="navpart5"><a href='/aviso'>Aviso Privacidad</a></li>
+
 				</ul>
 		  	</div>
-      	</div>
-
+      
+  
+  
+</div>
       	
       	@yield('content')
       	

@@ -4,18 +4,31 @@
 		Mostrar Ficha
 	@stop
 
+	
 	@section ('content')
 	
+		
+     	
+
 		<div class="row">
 			<div class="col-md-6">
-				<h1> Información General </h1>
+				@if ($errors->has())
+					<div class="alert alert-success"> Es necesario introducir la información correcta </div>
+				@else	
+					<h1> Información General </h1>
+				@endif
 			</div>
 
 			<div class="col-md-6 ">
 				<h3 class='tituloficha'> {{$tipo}} en {{$compra}} </h3>
 			</div>
-		</div>
 
+			
+
+				
+			</div>
+
+	</br>
 		<div class="row">
 		<div class="col-md-6">
 			<!-- Start WOWSlider.com BODY section -->
@@ -40,6 +53,18 @@
 			<script type="text/javascript" src="{{URL::asset('/engine2/wowslider.js')}}"></script>
 			<script type="text/javascript" src="{{URL::asset('/engine2/script.js')}}"></script>
 			<!-- End WOWSlider.com BODY section -->
+
+				<div class="row">
+					<div class="col-md-5">
+					</div>
+					<div class="col-md-1">
+						</br>
+						<h5> Regresar </h5>
+						<a href="/{{$compra}}/{{$tipo}}/{{$casa->zona_id}}"><img src= "{{URL::asset('/images/flecha.png')}}" alt="Regresar"/></a>
+					</div>
+				</div>	
+
+			
 		</div>
 
 		
@@ -108,6 +133,8 @@
 					<dd> {{ $casa->mediobano}} </dd>
 				</dl>
 			@endif
+
+				
 		</div>
 		
 		<div class="col-md-2">
@@ -137,6 +164,17 @@
 					<dd> {{ $casa->estacionamiento}}  </dd>
 				</dl>
 			@endif
+
+			<dl>
+				<dt>Asesor </dt>
+				<dd> 
+					@foreach ($casa->servicios as $asesor)
+						
+						{{ $asesor->phone }}
+						</br>
+						{{ $asesor->email }}	
+					@endforeach </dd>
+			</dl>
 		</div>
 
 		<div class="col-md-6">
@@ -149,13 +187,24 @@
 		</div>
 		<div class="col-md-6">
 			</br>
-			{!! Form::open(array('url'=>'/meinteresa'))!!}
+			{!!Form::open(array('url'=>'/meinteresa'))!!}
 			{!!Form::hidden('id', $casa->id)!!}
 			{!!Form::hidden('zona', $zona)!!}
 			{!!Form::hidden('tipo', $tipo)!!}
 			{!!Form::hidden('compra', $compra)!!}
 			{!!Form::label('email','Ingresa tu correo:')!!}
 			{!!Form::email('email', null, ['class' => 'form-control'])!!}
+			</br>
+			@if ($errors->has('email')) 
+				<div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div>
+			 @endif
+		</br>
+			{!!Form::label('phone','Ingresa tu teléfono:')!!}
+			{!!Form::input('number', 'phone', null, ['class' => 'form-control'])!!}
+			</br>
+			@if ($errors->has('phone')) 
+				<div class="alert alert-danger" role="alert">{{ $errors->first('phone') }}</div>
+			 @endif
 			</br>
 			{!!Form::submit('Me interesa', ['class'=> 'btn btn-primary form-control'])!!}
 		</div>	

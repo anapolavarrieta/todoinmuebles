@@ -134,6 +134,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
+		'Barryvdh\DomPDF\ServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -194,6 +195,7 @@ return [
 		'Form'	    => 'Illuminate\Html\FormFacade',
 		'Html'	    => 'Illuminate\Html\HtmlFacade',
 		'Pre'       => 'Paste\Pre',
+		'PDF'             => 'Barryvdh\DomPDF\Facade',
 
 	],
 

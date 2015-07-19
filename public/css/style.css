@@ -31,6 +31,13 @@ h3.tituloicono{
 	font-weight: bold;
 }
 
+h2.tituloicono{
+	text-align: center;
+	text-transform: capitalize;
+	color: #C72481;
+	font-weight: bold;
+}
+
 h3.tituloficha{
 	text-align: center;
 	text-transform: capitalize;
