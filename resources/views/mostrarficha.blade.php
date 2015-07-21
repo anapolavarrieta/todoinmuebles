@@ -174,7 +174,6 @@
 						</br>
 						{{ $asesor->email }}	
 					@endforeach </dd>
-			</dl>
 		</div>
 
 		<div class="col-md-6">
@@ -185,6 +184,18 @@
 				<dd> {{ $casa->descripcion}}</dd>
 			</dl>
 		</div>
+
+		<div class="col-md-6">
+			</dl>
+				{!!Form::open(array('url'=>'/pdf'))!!}
+				{!!Form::hidden('id', $casa->id)!!}
+				{!!Form::hidden('zona', $zona)!!}
+				{!!Form::hidden('tipo', $tipo)!!}
+				{!!Form::hidden('compra', $compra)!!}
+				{!!Form::submit('Crear PDF', ['class'=> 'btn btn-info form-control'])!!}
+			<dl>
+		</div>
+
 		<div class="col-md-6">
 			</br>
 			{!!Form::open(array('url'=>'/meinteresa'))!!}

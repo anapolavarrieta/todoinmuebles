@@ -260,6 +260,20 @@ Route::get('/casa/{id}', function($id)
 
 });
 
+Route::post('/pdf', function()
+{
+   $id = Input::get('id');   
+   $casa = App\Casa::findOrFail($id);
+   $zona = Input::get('zona');
+   $tipo = Input::get('tipo');
+   $compra = Input::get('compra');
+
+
+   $pdf= PDF::loadview('pdf', ['casa'=> $casa, 'zona'=>$zona, 'tipo'=>$tipo, 'compra'=>$compra]);
+       
+    return  $pdf->stream(); 
+    
+});
 
 Route::post('/meinteresa', function()
 {
