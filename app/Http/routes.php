@@ -372,114 +372,29 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(5);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(6);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(7);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(9);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
     $casa= App\Casa::find(13);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(14);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(23);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(24);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(31);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(32);
-    $casa->municipio= 'Alvaro Obregón';
+    $casa->calle= 'Olivarito';
     $casa->save();
 
     $casa= App\Casa::find(35);
-    $casa->municipio= 'Alvaro Obregón';
+    $casa->calle= 'Equus';
     $casa->save();
 
     $casa= App\Casa::find(36);
-    $casa->municipio= 'Alvaro Obregón';
+    $casa->calle= 'Advento';
     $casa->save();
 
-    $casa= App\Casa::find(37);
-    $casa->municipio= 'Alvaro Obregón';
+    $casa= App\Casa::find(7);
+    $casa->precio= '4565484.00';
     $casa->save();
 
-    $casa= App\Casa::find(39);
-    $casa->municipio= 'Alvaro Obregón';
+    $casa= App\Casa::find(36);
+    $casa->imagenes= '18';
+    $casa->lat= '19.338465';
+    $casa->long='-99.21069';
     $casa->save();
 
-    $casa= App\Casa::find(41);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(42);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(43);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(8);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(12);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(17);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(19);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(22);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(25);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(26);
-    $casa->municipio= 'Alvaro Obregón';
-    $casa->save();
-
-    $casa= App\Casa::find(15);
-    $casa->municipio= 'Benito Juárez';
-    $casa->save();
-
-    $casa= App\Casa::find(33);
-    $casa->municipio= 'Benito Juárez';
-    $casa->save();
-
-
-
-
-
+    
     return 'Se edito';
 });
 

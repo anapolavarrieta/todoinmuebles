@@ -26,7 +26,11 @@
 							</p>
 								<td>
 								<div>
-		    						<p> {{ $casa->calle}} {{ $casa->numero}}</p>
+									@if ($compra == 'preventa')
+										<p> Desarrollo {{ $casa->calle}} </p>
+									@else					
+		    							<p> {{ $casa->calle}} {{ $casa->numero}}</p>
+		    						@endif
 		    						<p> {{ $casa->colonia}}, {{ $casa->municipio}} </p>
 		    						<p> {{ $casa->ciudad}}, {{ $casa->estado}} </p>
 		    						<p> ${{ $english_format_number = number_format($casa->precio)}} </p>

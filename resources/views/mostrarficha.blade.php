@@ -77,7 +77,12 @@
 					<dd> ${{ $english_format_number = number_format($casa->precio)}} USD</dd>
 				@else
 					<dt>Precio </dt>
-					<dd> ${{ $english_format_number = number_format($casa->precio)}} </dd>
+					@if ($compra == 'preventa')
+						<dd> Desde ${{ $english_format_number = number_format($casa->precio)}} </dd>
+						<dd> <a href= '../../images/PV{{$casa->id}}.pdf') target="_blank"> Mostrar opciones </dt></a> </dd>
+					@else
+						<dd> ${{ $english_format_number = number_format($casa->precio)}} </dd>
+					@endif
 				@endif
 			</dl>
 			</br>
@@ -110,7 +115,11 @@
 			<dl>
 				@if ($casa->tipo != 'T')
 					<dt>Superficie </dt>
-					<dd> {{ $casa->supconst}} m&sup2 </dd>
+					@if ($compra == 'preventa')
+						<dd> Desde {{ $casa->supconst}} m&sup2 </dd>
+					@else
+						<dd> {{ $casa->supconst}} m&sup2 </dd>
+					@endif
 				@else
 					<dt>Superficie Construcción </dt>
 					<dd> {{ $casa->supconst}} m&sup2 </dd>
@@ -175,6 +184,16 @@
 						{{ $asesor->email }}	
 					@endforeach </dd>
 		</div>
+
+		@if ($compra == 'preventa')
+			<div class="col-md-6">
+				</br>
+				</br>
+				<dl>
+					
+				</dl>
+			</div>
+		@endif
 
 		<div class="col-md-6">
 			</br>
