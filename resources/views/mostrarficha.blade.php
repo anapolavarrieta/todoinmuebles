@@ -212,6 +212,7 @@
 				{!!Form::hidden('tipo', $tipo)!!}
 				{!!Form::hidden('compra', $compra)!!}
 				{!!Form::submit('Crear PDF', ['class'=> 'btn btn-info form-control'])!!}
+				{!!Form::close()!!}
 			<dl>
 		</div>
 
