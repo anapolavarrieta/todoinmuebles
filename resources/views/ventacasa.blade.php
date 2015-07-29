@@ -5,13 +5,16 @@
 	@stop
 
 	@section ('content')
+	<div class="row">
 		<div class="col-md-2">
 			<div class="icono"> 
 				<h3 class='tituloicono'>{{$compra}}</h3>
-				<a href='/venta/{{$tipo}}' ><img src= "{{URL::asset('/images/').'/'.$tipo.'.png'}}" class="img-responsive" alt="Casa"/></a>
+				<a href='/{{$compra}}/{{$tipo}}' ><img src= "{{URL::asset('/images/').'/'.$tipo.'.png'}}" class="img-responsive" alt="Casa"/></a>
 			</div> <!-- class="icono" -->
 		</div> <!-- class="col-md-2" -->
 		
+
+	
 		<div class="col-md-10">
 			<div>
 				<h3> Selecciona un municipio y una zona: </h3>
@@ -70,7 +73,20 @@
 					</div> <!--id="collapsetodo" class="panel-collapse collapse"-->
 				</div> <!--	class="panel panel-default"-->
 			</div>
+			</br>
 		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-10"></div>
+
+
+		<div class="col-md-2">
+				<a href="/{{$compra}}"><img src= "{{URL::asset('/images/flecha.png')}}" alt="Regresar"/></a>
+				<h5> Regresar </h5>
+		</div>
+	</div>
+		
 				
 	@stop
 

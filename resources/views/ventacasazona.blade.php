@@ -9,7 +9,7 @@
 		<div class="col-md-2">
 			<div class="icono"> 
 				<h3 class='tituloicono'>{{$compra}}</h3>
-				<a href='/venta/{{$tipo}}' ><img src= "{{URL::asset('/images/').'/'.$tipo.'.png'}}" class="img-responsive" alt="Casa"/></a>
+				<a href='/{{$compra}}/{{$tipo}}' ><img src= "{{URL::asset('/images/').'/'.$tipo.'.png'}}" class="img-responsive" alt="Casa"/></a>
 			</div>
 		</div>
 		<div class="col-md-10">

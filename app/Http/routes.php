@@ -372,27 +372,10 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(13);
-    $casa->calle= 'Olivarito';
+    $casa= App\Casa::find(39);
+    $casa->imagenes= '21';
     $casa->save();
 
-    $casa= App\Casa::find(35);
-    $casa->calle= 'Equus';
-    $casa->save();
-
-    $casa= App\Casa::find(36);
-    $casa->calle= 'Advento';
-    $casa->save();
-
-    $casa= App\Casa::find(7);
-    $casa->precio= '4565484.00';
-    $casa->save();
-
-    $casa= App\Casa::find(36);
-    $casa->imagenes= '18';
-    $casa->lat= '19.338465';
-    $casa->long='-99.21069';
-    $casa->save();
 
     
     return 'Se edito';

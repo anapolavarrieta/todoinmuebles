@@ -66,6 +66,12 @@
 	@if (@$casa->tipo != 'T')
 		<p>Estacionamiento: {{ @$casa->estacionamiento}}  </p>
 	@endif
+
+	<dt>Asesor: </dt>
+		@foreach ($casa->servicios as $asesor)	
+						<dd> {{ $asesor->phone }}</dd>
+						<dd>	{{ $asesor->email }} </dd>	
+		@endforeach </dd>
 </div>
 																
 <div></br></br>

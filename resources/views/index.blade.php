@@ -10,7 +10,7 @@
       <div class="ws_images">
         <ul>
           @foreach ($casas as $casa)
-            <li><a href='/casa/{{$casa->id}}' target="_blank"><img src="data2/images/casa{{$casa->id}}/imagen1.jpg" alt="Imagen{{$i}}" title="Imagen{{$i}}" id="wows1_0"/></a></li>
+            <li><a href='/casa/{{$casa->id}}' target="_blank"><img src="data2/images/casa{{$casa->id}}/imagen1.jpg" alt="Imagen{{$i}}" title="Zona: {{$casa->colonia}}" id="wows1_0"/></a></li>
             {{$i= $i+1}}
           @endforeach
         </ul>
