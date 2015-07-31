@@ -372,8 +372,24 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(39);
-    $casa->imagenes= '21';
+    $casa= App\Casa::find(43);
+    $casa->estatus= '0';
+    $casa->save();
+
+    $casa= App\Casa::find(42);
+    $casa->estatus= '0';
+    $casa->save();
+
+    $casa= App\Casa::find(37);
+    $casa->estatus= '0';
+    $casa->save();
+
+    $casa= App\Casa::find(11);
+    $casa->estatus= '0';
+    $casa->save();
+
+    $casa= App\Casa::find(4);
+    $casa->estatus= '0';
     $casa->save();
 
 
