@@ -5,6 +5,7 @@
 <head>
 	<title>@yield ('title', 'TodoInmuebles')</title>
 	<meta charset="utf-8">
+	<meta name="google-site-verification" content="DJaAYDMJtsTmxljw21P9Dm1_Y_ATYE8_dDKwEC9EJiQ" />
 	<link href="{{URL::asset('/css/Bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="{{URL::asset('/css/style.css')}}" type="text/css"> 
 	<link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
