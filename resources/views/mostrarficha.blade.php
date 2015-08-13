@@ -223,6 +223,7 @@
 			{!!Form::hidden('zona', $zona)!!}
 			{!!Form::hidden('tipo', $tipo)!!}
 			{!!Form::hidden('compra', $compra)!!}
+			{!!Form::hidden ('_token', csrf_token())!!}
 			{!!Form::label('email','Ingresa tu correo:')!!}
 			{!!Form::email('email', null, ['class' => 'form-control'])!!}
 			</br>
