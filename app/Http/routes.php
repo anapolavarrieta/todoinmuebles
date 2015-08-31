@@ -373,36 +373,15 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   $casa=App\Casa::find('55');
-  
+  $casa->ambientes()->detach('4');
+  $casa->servicios()->detach('3');
 
-  $casa->zona_id='9';
-  $casa->calle='Av Vasco de Quiroga';
-  $casa->colonia='Santa Fe';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='33000';
-  $casa->supconst='260';
-  $casa->supterr='0';
-  $casa->antiguedad='15 años';
-  $casa->recamara='3';
-  $casa->bano='3';
-  $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Amplisimo departamento, recamara principal con vestidor, family, cocina equipada, área de lavado, cuarto de servicio. Amenities: alberca, cancha de
-  paddle, salón de fiestas, juegos infantiles, gym';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='5';
-  $casa->lat='19.375667';
-  $casa->long='-99.255745';
+  
   
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([6,14,19,20]);
-  $casa->servicios()->attach('1');
+  
 });
 
 /*Route::get('/editar_casa', function()
