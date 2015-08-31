@@ -365,42 +365,18 @@ Route::post('/crear_casa',function()
 	
 
 	$casa->ambientes()->attach(Input::get('ambientes'));
-	/*$casa->generales()->attach(Input::get('generales'));
-	$casa->servicios()->attach(Input::get('servicios'));*/
+	$casa->servicios()->attach(Input::get('servicios'));
+  /*$casa->generales()->attach(Input::get('generales'));*/
  	return 'Se ha creado la casa';
 });
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(7);
-    $casa->precio= '4565484';
-    $casa->supconst= '148';
-    $casa->estado_compra= 'V';
+    $casa= App\Casa::find(44);
+    $casa->servicios()->attach('15');
     $casa->save();
 
-    $casa= App\Casa::find(9);
-    $casa->precio= '19000';
-    $casa->save();
-
-    $casa= App\Casa::find(16);
-    $casa->precio= '7123500';
-    $casa->supconst= '177';
-    $casa->save();
-
-    $casa= App\Casa::find(30);
-    $casa->supconst= '103';
-    $casa->save();
-
-    $casa= App\Casa::find(41);
-    $casa->precio= '7123500';
-    $casa->supconst= '177';
-    $casa->save();
-
-    $casa= App\Casa::find(41);
-    $casa->precio= '2600000';
-    $casa->save();
-
-    
+   
     return 'Se edito';
 });
 
