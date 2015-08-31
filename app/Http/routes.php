@@ -372,10 +372,16 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-
   
+  $casa=App\Casa::find('54');
+  $casa->estatus='0';
+  $casa->save();
 
-
+  /*
+   $casa=new App\Casa();
+  $casa->zona_id='9';
+   $casa->estatus='1';
+    $casa->save(); 
 
   $casa=new App\Casa();
   $casa->zona_id='9';
@@ -404,10 +410,10 @@ Route::get('/editar_casa', function()
   
 
   $casa->ambientes()->attach('4,14,16,18');
-  $casa->servicios()->attach('3');
+  $casa->servicios()->attach('15');
 
 
-  /*
+  
   $casa=new App\Casa();
   $casa->zona_id='9';
   $casa->calle='Av Vasco de Quiroga';
@@ -467,8 +473,8 @@ Route::get('/editar_casa', function()
   
 
   $casa->ambientes()->attach('2,4,5,8,14,23');
-  $casa->servicios()->attach('3');*/
-   
+  $casa->servicios()->attach('15');
+   */
     return 'Se edito';
 });
 
