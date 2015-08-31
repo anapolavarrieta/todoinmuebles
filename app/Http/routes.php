@@ -374,33 +374,33 @@ Route::get('/editar_casas', function()
 {
   
   $casa=new App\Casa();
-  $casa->zona_id='5';
-  $casa->calle='Av Toluca';
-  $casa->colonia='Olivar de los Padres';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='20800';
-  $casa->supconst='123';
-  $casa->supterr='0';
-  $casa->antiguedad='20 años';
-  $casa->recamara='2';
-  $casa->bano='3';
-  $casa->mediobano='0';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Departamento recien remodelado listo para ocuparse. Cuenta con sala comedor, cocina equipada, área de lavado, cuarto de servicio, vista a los
-  volcanes, calientito, pisos de madera, baños de marmol, estacionamiento de visitas, 8,000mts de jardín con juegos';
+  $casa->zona_id='22';
+  $casa->calle='Fuente de la Palma';
+  $casa->colonia='Lomas de las Palmas';
+  $casa->municipio='Huixquilucan';
+  $casa->ciudad='';
+  $casa->estado='Estado de México';
+  $casa->precio='14500000';
+  $casa->supconst='669';
+  $casa->supterr='660';
+  $casa->antiguedad='10 años';
+  $casa->recamara='3';
+  $casa->bano='6';
+  $casa->mediobano='1';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Hermosa casa sola en calle con seguridad. Recamara principal con vestidor, jacuzzi y vapor, sala de tv, salón de fiestas con cocina y baño, 
+  bibioteca, despacho, estancia con chimenea, 2 jardines, cancha de tennis, lavandería, cuarto de servicio, acceso al parque privado con cancha de padel y futbol';
   $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='0';
-  $casa->lat='19.338438';
-  $casa->long='-99.221775';
+  $casa->tipo='C';
+  $casa->estado_compra='V';
+  $casa->imagenes='20';
+  $casa->lat='19.395820';
+  $casa->long='-99.273394';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([5,6,19,20,23,27]);
-  $casa->servicios()->attach('4');
+  $casa->ambientes()->attach([2,4,9,10,11,15,19,20,23]);
+  $casa->servicios()->attach('1');
   
 });
 
