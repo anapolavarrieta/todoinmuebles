@@ -372,38 +372,18 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
+
   $casa=new App\Casa();
   $casa->zona_id='9';
-  $casa->calle='Av Vasco de Quiroga';
-  $casa->colonia='Santa Fe';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='32000';
-  $casa->supconst='280';
-  $casa->supterr='0';
-  $casa->antiguedad='20 años';
-  $casa->recamara='3';
-  $casa->bano='3';
-  $casa->mediobano='1';
-  $casa->estacionamiento='4';
-  $casa->descripcion='Departamento en excelente estado, recamaras con vestidor, amplio family, amplia sala y comedor, terraza de 40 mts, calientito, closets de blancos,
-  cocina equipada, area de lavado, cuarto de servicio, bodega, Amenities: alberca, padel, gym, jardín con juegos infantiles y salón de fiestas';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='10';
-  $casa->lat='19.375667';
-  $casa->long='-99.255745';
-  
   $casa->save(); 
-  
 
-  $casa->ambientes()->attach('6,8,13,14,18,19,20');
-  $casa->servicios()->attach('1');
+  $casa=App\Casa::find('44');
+  $casa->precio='30000000';
+  $casa->save();
+
+  /*
 
   
-/*
   $casa=new App\Casa();
   $casa->zona_id='9';
   $casa->calle='Av Santa Fe';
@@ -411,23 +391,91 @@ Route::get('/editar_casa', function()
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='30000';
-  $casa->supconst='140';
+  $casa->precio='21500';
+  $casa->supconst='83';
   $casa->supterr='0';
   $casa->antiguedad='1 año';
-  $casa->recamara='2';
-  $casa->bano='2';
+  $casa->recamara='1';
+  $casa->bano='1';
   $casa->mediobano='1';
   $casa->estacionamiento='2';
-  $casa->descripcion='Excelente departamento. Recamara principal con vestidor. Área de lavado, cuarto de servicio, cocina abierta, balcón alrededor del 
-  departamento, Amenities: alberca, spa, gym, clases de salón, sky lounge, cine, business center, estacionamiento de visitas';
+  $casa->descripcion='Departamento en uno de los mejores desarrollos de Santa Fe, recamara con vestidor, family, cocina abierta, bodega. Amenities: alberca, paddle, 
+  gym, salón de adultos, salón de proyecciones, jardín con asadores, salón de fiestas, vigilancia 24hrs, poliza jurídica';
   $casa->estatus='1';
   $casa->tipo='D';
   $casa->estado_compra='R';
-  $casa->imagenes='19';
+  $casa->imagenes='0';
   $casa->lat='19.357024';
-  $casa->long='-99.275685';   
-    return 'Se edito';*/
+  $casa->long='-99.275685';
+  $casa->save(); 
+  
+
+  $casa->ambientes()->attach('4,14,16,18');
+  $casa->servicios()->attach('15');
+
+
+  $casa=new App\Casa();
+  $casa->zona_id='9';
+  $casa->calle='Av Vasco de Quiroga';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='33000';
+  $casa->supconst='260';
+  $casa->supterr='0';
+  $casa->antiguedad='15 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Amplisimo departamento, recamara principal con vestidor, family, cocina equipada, área de lavado, cuarto de servicio. Amenities: alberca, cancha de
+  paddle, salón de fiestas, juegos infantiles, gym';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='5';
+  $casa->lat='19.375667';
+  $casa->long='-99.255745';
+  
+  $casa->save(); 
+  
+
+  $casa->ambientes()->attach('6,14,19,20');
+  $casa->servicios()->attach('13');
+
+  
+
+  $casa=new App\Casa();
+  $casa->zona_id='9';
+  $casa->calle='Av Santa Fe High Park';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='18000';
+  $casa->supconst='82';
+  $casa->supterr='0';
+  $casa->antiguedad='3 años';
+  $casa->recamara='2';
+  $casa->bano='1';
+  $casa->mediobano='0';
+  $casa->estacionamiento='1';
+  $casa->descripcion='Excelente departamento listo para habitar, estudio, cocina abierta, vista panorámica, vigilancia privada. Amenities: gym, alberca, cine, salón de
+  adultos, cancha de paddle, ludoteca, business center, spa, asadores, jardín';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='0';
+  $casa->lat='19.359484';
+  $casa->long='-99.270687';
+  $casa->save(); 
+  
+
+  $casa->ambientes()->attach('2,4,5,8,14,23');
+  $casa->servicios()->attach('3');*/
+   
+    return 'Se edito';
 });
 
 Route::get('/crear_zona', function()
