@@ -372,46 +372,33 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(4);
-    $casa->estatus= '0';
+    $casa= App\Casa::find(7);
+    $casa->precio= '4565484';
+    $casa->supconst= '148';
+    $casa->estado_compra= 'V';
     $casa->save();
 
-    $casa= App\Casa::find(11);
-    $casa->estatus= '0';
+    $casa= App\Casa::find(9);
+    $casa->precio= '19000';
     $casa->save();
 
-    $casa= App\Casa::find(13);
-    $casa->estatus= '0';
+    $casa= App\Casa::find(16);
+    $casa->precio= '7123500';
+    $casa->supconst= '177';
     $casa->save();
 
-    $casa= App\Casa::find(14);
-    $casa->estatus= '0';
+    $casa= App\Casa::find(30);
+    $casa->supconst= '103';
     $casa->save();
 
-    $casa= App\Casa::find(29);
-    $casa->estatus= '0';
+    $casa= App\Casa::find(41);
+    $casa->precio= '7123500';
+    $casa->supconst= '177';
     $casa->save();
 
-    $casa= App\Casa::find(31);
-    $casa->estatus= '0';
+    $casa= App\Casa::find(41);
+    $casa->precio= '2600000';
     $casa->save();
-
-    $casa= App\Casa::find(32);
-    $casa->estatus= '0';
-    $casa->save();
-
-    $casa= App\Casa::find(34);
-    $casa->estatus= '0';
-    $casa->save();
-
-    $casa= App\Casa::find(35);
-    $casa->estatus= '0';
-    $casa->save();
-
-    $casa= App\Casa::find(39);
-    $casa->estatus= '0';
-    $casa->save();
-
 
     
     return 'Se edito';
