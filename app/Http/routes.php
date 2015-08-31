@@ -372,9 +372,8 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=App\Casa::find('55');
-  $casa->ambientes()->detach('4');
-  $casa->servicios()->detach('3');
+  $casa=App\Casa::find('56');
+  $casa->estatus='1';
 
   
   
