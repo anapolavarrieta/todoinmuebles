@@ -374,6 +374,38 @@ Route::get('/editar_casa', function()
 {
   $casa=new App\Casa();
   $casa->zona_id='9';
+  $casa->calle='Av Vasco de Quiroga';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='32000';
+  $casa->supconst='280';
+  $casa->supterr='0';
+  $casa->antiguedad='20 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='4';
+  $casa->descripcion='Departamento en excelente estado, recamaras con vestidor, amplio family, amplia sala y comedor, terraza de 40 mts, calientito, closets de blancos,
+  cocina equipada, area de lavado, cuarto de servicio, bodega, Amenities: alberca, padel, gym, jardín con juegos infantiles y salón de fiestas';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='10';
+  $casa->lat='19.375667';
+  $casa->long='-99.255745';
+  
+  $casa->save(); 
+  
+
+  $casa->ambientes()->attach('6,8,13,14,18,19,20');
+  $casa->servicios()->attach('1');
+
+  
+/*
+  $casa=new App\Casa();
+  $casa->zona_id='9';
   $casa->calle='Av Santa Fe';
   $casa->colonia='Santa Fe';
   $casa->municipio='Alvaro Obregón';
@@ -394,16 +426,8 @@ Route::get('/editar_casa', function()
   $casa->estado_compra='R';
   $casa->imagenes='19';
   $casa->lat='19.357024';
-  $casa->long='-99.275685';
-  
-  $casa->save(); 
-  
-
-  $casa->ambientes()->attach('8,14,19,20,28');
-  $casa->servicios()->attach('1');
-
-   
-    return 'Se edito';
+  $casa->long='-99.275685';   
+    return 'Se edito';*/
 });
 
 Route::get('/crear_zona', function()
