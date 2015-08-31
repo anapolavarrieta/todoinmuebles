@@ -370,14 +370,21 @@ Route::post('/crear_casa',function()
  	return 'Se ha creado la casa';
 });
 
-Route::get('/editar_casa', function()
+Route::get('/editar_casas', function()
+{
+  $casa=App\Casa::find('53');
+  $casa->ambientes()->attach([14,16,18]);
+  $casa->save();
+  return 'Se edito';
+});
+/*Route::get('/editar_casa', function()
 {
   
-  $casa=App\Casa::find('54');
-  $casa->estatus='0';
+  $casa=App\Casa::find('53');
+  $casa->ambientes()->detach('14');
   $casa->save();
 
-  /*
+  
    $casa=new App\Casa();
   $casa->zona_id='9';
    $casa->estatus='1';
