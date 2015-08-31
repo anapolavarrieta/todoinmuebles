@@ -372,10 +372,35 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=App\Casa::find('48');
   
-$casa->ambientes()->attach([8,13,19,20,26]);
+  $casa=new App\Casa();
+  $casa->zona_id='5';
+  $casa->calle='Av Toluca';
+  $casa->colonia='Olivar de los Padres';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='18500';
+  $casa->supconst='123';
+  $casa->supterr='0';
+  $casa->antiguedad='20 años';
+  $casa->recamara='2';
+  $casa->bano='2';
+  $casa->mediobano='0';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Departamento recien remodelado listo para ocuparse. Cuenta con sala comedor, cocina equipada, área de lavado, cuarto de servicio, vista a los
+  volcanes, calientito, pisos de madera, baños de marmol, estacionamiento de visitas, 8,000mts de jardín con juegos';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='0';
+  $casa->lat='19.338438';
+  $casa->long='-99.221775';
+  $casa->save(); 
+  
 
+  $casa->ambientes()->attach([5,6,19,20,23]);
+  $casa->servicios()->attach('4');
   
 });
 
