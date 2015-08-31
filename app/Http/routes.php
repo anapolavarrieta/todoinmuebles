@@ -377,6 +377,7 @@ Route::get('/editar_casas', function()
   $casa->save();
   return 'Se edito';
 });
+
 /*Route::get('/editar_casa', function()
 {
   
@@ -481,9 +482,9 @@ Route::get('/editar_casas', function()
 
   $casa->ambientes()->attach('2,4,5,8,14,23');
   $casa->servicios()->attach('15');
-   */
+   
     return 'Se edito';
-});
+});*/
 
 Route::get('/crear_zona', function()
 {
