@@ -372,14 +372,33 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=App\Casa::find('56');
+  $casa=new App\Casa();
+  $casa->zona_id='9';
+  $casa->calle='Av Santa Fe High Park';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='18000';
+  $casa->supconst='82';
+  $casa->supterr='0';
+  $casa->antiguedad='3 años';
+  $casa->recamara='2';
+  $casa->bano='1';
+  $casa->mediobano='0';
+  $casa->estacionamiento='1';
+  $casa->descripcion='Excelente departamento listo para habitar, estudio, cocina abierta, vista panorámica, vigilancia privada. Amenities: gym, alberca, cine, salón de
+  adultos, cancha de paddle, ludoteca, business center, spa, asadores, jardín';
   $casa->estatus='1';
-
-  
-  
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='0';
+  $casa->lat='19.359484';
+  $casa->long='-99.270687';
   $casa->save(); 
   
-
+$casa->ambientes()->attach([2,4,5,8,14,23]);
+  $casa->servicios()->attach('3');
   
 });
 
