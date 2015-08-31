@@ -372,9 +372,35 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casa', function()
 {
-    $casa= App\Casa::find(44);
-    $casa->servicios()->attach('15');
-    $casa->save();
+  $casa=new App\Casa();
+  $casa->zona_id='9';
+  $casa->calle='Av Santa Fe';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='30000';
+  $casa->supconst='140';
+  $casa->supterr='0';
+  $casa->antiguedad='1 año';
+  $casa->recamara='2';
+  $casa->bano='2';
+  $casa->mediobano='1';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Excelente departamento. Recamara principal con vestidor. Área de lavado, cuarto de servicio, cocina abierta, balcón alrededor del 
+  departamento, Amenities: alberca, spa, gym, clases de salón, sky lounge, cine, business center, estacionamiento de visitas';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='19';
+  $casa->lat='19.357024';
+  $casa->long='-99.275685';
+  
+  $casa->save(); 
+  
+
+  $casa->ambientes()->attach('8,14,19,20,28');
+  $casa->servicios()->attach('1');
 
    
     return 'Se edito';
