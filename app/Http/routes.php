@@ -380,12 +380,12 @@ Route::get('/editar_casas', function()
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='18500';
+  $casa->precio='20800';
   $casa->supconst='123';
   $casa->supterr='0';
   $casa->antiguedad='20 años';
   $casa->recamara='2';
-  $casa->bano='2';
+  $casa->bano='3';
   $casa->mediobano='0';
   $casa->estacionamiento='2';
   $casa->descripcion='Departamento recien remodelado listo para ocuparse. Cuenta con sala comedor, cocina equipada, área de lavado, cuarto de servicio, vista a los
@@ -399,7 +399,7 @@ Route::get('/editar_casas', function()
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([5,6,19,20,23]);
+  $casa->ambientes()->attach([5,6,19,20,23,27]);
   $casa->servicios()->attach('4');
   
 });
