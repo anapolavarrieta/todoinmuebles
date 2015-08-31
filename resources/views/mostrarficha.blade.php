@@ -239,6 +239,7 @@
 			 @endif
 			</br>
 			{!!Form::submit('Me interesa', ['class'=> 'btn btn-primary form-control'])!!}
+			
 		</div>	
 	</div>
 
