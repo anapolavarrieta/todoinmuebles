@@ -374,33 +374,34 @@ Route::get('/editar_casas', function()
 {
   
   $casa=new App\Casa();
-  $casa->zona_id='22';
-  $casa->calle='Fuente de la Palma';
-  $casa->colonia='Lomas de las Palmas';
-  $casa->municipio='Huixquilucan';
-  $casa->ciudad='';
-  $casa->estado='Estado de México';
-  $casa->precio='14500000';
-  $casa->supconst='669';
-  $casa->supterr='660';
+  $casa->zona_id='23';
+  $casa->calle='Las Aguilas La Cima';
+  $casa->colonia='Lomas de Axomiatla';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='1500000';
+  $casa->supconst='727';
+  $casa->supterr='632';
   $casa->antiguedad='10 años';
-  $casa->recamara='3';
+  $casa->recamara='4';
   $casa->bano='6';
-  $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Hermosa casa sola en calle con seguridad. Recamara principal con vestidor, jacuzzi y vapor, sala de tv, salón de fiestas con cocina y baño, 
-  bibioteca, despacho, estancia con chimenea, 2 jardines, cancha de tennis, lavandería, cuarto de servicio, acceso al parque privado con cancha de padel y futbol';
+  $casa->mediobano='0';
+  $casa->estacionamiento='4';
+  $casa->descripcion='Excelente opción en fraccionamiento La Cima, recamaras cada una con vestidor, family, cocina integral con desayunador, techos de doble altura, 
+  jardín privado, cuarto de servicio, cuarto de chofer, terraza, estudio, bodega. Tiene 1 departamento independiente con recamara, vestidor, baño, cocina, sala, comedor. 
+  Amenities: pista de jogging, salón de fiestas, cancha de futbol, cancha de paddle';
   $casa->estatus='1';
   $casa->tipo='C';
   $casa->estado_compra='V';
-  $casa->imagenes='20';
-  $casa->lat='19.395820';
-  $casa->long='-99.273394';
+  $casa->imagenes='27';
+  $casa->lat='19.346751';
+  $casa->long='-99.236600';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([2,4,9,10,11,15,19,20,23]);
-  $casa->servicios()->attach('1');
+  $casa->ambientes()->attach([2,6,14,16,19,20,23,25,26]);
+  $casa->servicios()->attach('3');
   
 });
 
