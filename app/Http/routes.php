@@ -555,68 +555,23 @@ Route::get('/editar_servicios', function()
 
 Route::get('/editar_zona', function()
 {
-    $zona= App\Zona::find(5);
+
+    $zona= new App\Zona();
+    $zona->zona= 'Lomas de las Palmas';
+    $zona->delegacion= 'Huixquilucan';
+    $zona->save();
+
+    $zona= new App\Zona();
+    $zona->zona= 'Lomas de Axomiatla';
     $zona->delegacion= 'Alvaro Obregón';
     $zona->save();
 
-    $zona= App\Zona::find(6);
+    $zona= new App\Zona();
+    $zona->zona= 'El Limbo';
     $zona->delegacion= 'Alvaro Obregón';
     $zona->save();
 
-    $zona= App\Zona::find(7);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(8);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(9);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(10);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(11);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(12);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(13);
-    $zona->zona= "Ampliación de las Aguilas";
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(14);
-    $zona->delegacion= 'Benito Juárez';
-    $zona->save();
-
-    $zona= App\Zona::find(15);
-    $zona->delegacion= 'Miguel Hidalgo';
-    $zona->save();
-
-    $zona= App\Zona::find(16);
-    $zona->zona= "Anáhuac";
-    $zona->delegacion= 'Miguel Hidalgo';
-    $zona->save();
-
-    $zona= App\Zona::find(19);
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= App\Zona::find(20);
-    $zona->delegacion= 'Benito Juárez';
-    $zona->save();
-    
-
-    $zona= App\Zona::find(4);
-    $zona->zona= 'Hacienda San Martín';
-    $zona->save();
+   
     return 'Se edito';
 });
 
