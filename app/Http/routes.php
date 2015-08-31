@@ -374,33 +374,32 @@ Route::get('/editar_casas', function()
 {
   
   $casa=new App\Casa();
-  $casa->zona_id='23';
-  $casa->calle='Las Aguilas La Cima';
-  $casa->colonia='Lomas de Axomiatla';
+  $casa->zona_id='24';
+  $casa->calle='Privada de Linares';
+  $casa->colonia='El Limbo';
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='6000';
-  $casa->supconst='727';
-  $casa->supterr='632';
-  $casa->antiguedad='10 años';
-  $casa->recamara='4';
-  $casa->bano='6';
-  $casa->mediobano='0';
-  $casa->estacionamiento='4';
-  $casa->descripcion='Excelente opción en fraccionamiento La Cima, recamaras cada una con vestidor, family, cocina integral con desayunador, techos de doble altura, 
-  jardín privado, cuarto de servicio, cuarto de chofer, terraza, estudio, bodega. Tiene 1 departamento independiente con recamara, vestidor, baño, cocina, sala, comedor. 
-  Amenities: pista de jogging, salón de fiestas, cancha de futbol, cancha de paddle';
+  $casa->precio='4000000';
+  $casa->supconst='270';
+  $casa->supterr='270';
+  $casa->antiguedad='20 años';
+  $casa->recamara='3';
+  $casa->bano='2';
+  $casa->mediobano='1';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Casa para remodelar, recamara principal con vestidor, cuarto que se puede ocupar de oficina, family, juegos, amplia cocina equipada, área de lavado,
+  terraza alrededor de la casa';
   $casa->estatus='1';
   $casa->tipo='C';
-  $casa->estado_compra='R';
-  $casa->imagenes='27';
-  $casa->lat='19.346751';
-  $casa->long='-99.236600';
+  $casa->estado_compra='V';
+  $casa->imagenes='18';
+  $casa->lat='';
+  $casa->long='';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([2,6,14,16,19,20,23,25,26]);
+  $casa->ambientes()->attach([2,6,19,26]);
   $casa->servicios()->attach('3');
   
 });
