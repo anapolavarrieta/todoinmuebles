@@ -373,17 +373,10 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casa', function()
 {
 
-  $casa=new App\Casa();
-  $casa->zona_id='9';
-  $casa->save(); 
-
-  $casa=App\Casa::find('44');
-  $casa->precio='30000000';
-  $casa->save();
-
-  /*
-
   
+
+
+
   $casa=new App\Casa();
   $casa->zona_id='9';
   $casa->calle='Av Santa Fe';
@@ -414,6 +407,7 @@ Route::get('/editar_casa', function()
   $casa->servicios()->attach('15');
 
 
+  /*
   $casa=new App\Casa();
   $casa->zona_id='9';
   $casa->calle='Av Vasco de Quiroga';
