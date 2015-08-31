@@ -380,7 +380,7 @@ Route::get('/editar_casas', function()
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='1500000';
+  $casa->precio='6000';
   $casa->supconst='727';
   $casa->supterr='632';
   $casa->antiguedad='10 años';
@@ -393,7 +393,7 @@ Route::get('/editar_casas', function()
   Amenities: pista de jogging, salón de fiestas, cancha de futbol, cancha de paddle';
   $casa->estatus='1';
   $casa->tipo='C';
-  $casa->estado_compra='V';
+  $casa->estado_compra='R';
   $casa->imagenes='27';
   $casa->lat='19.346751';
   $casa->long='-99.236600';
