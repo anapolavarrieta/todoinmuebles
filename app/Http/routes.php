@@ -372,9 +372,9 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=App\Casa::find('47');
+  $casa=App\Casa::find('48');
   
-$casa->ambientes()->attach([14,19,20,28]);
+$casa->ambientes()->attach([8,13,19,20,26]);
 
   
 });
