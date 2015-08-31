@@ -404,7 +404,7 @@ Route::get('/editar_casa', function()
   
 
   $casa->ambientes()->attach('4,14,16,18');
-  $casa->servicios()->attach('15');
+  $casa->servicios()->attach('3');
 
 
   /*
