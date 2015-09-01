@@ -33,7 +33,11 @@
 		    						@endif
 		    						<p> {{ $casa->colonia}}, {{ $casa->municipio}} </p>
 		    						<p> {{ $casa->ciudad}}, {{ $casa->estado}} </p>
-		    						<p> ${{ $english_format_number = number_format($casa->precio)}} </p>
+		    						@if ($casa->id == '60' or $casa->id == '61')
+										<p> ${{ $english_format_number = number_format($casa->precio)}} USD </p>
+									@else
+										<p> ${{ $english_format_number = number_format($casa->precio)}} </p>
+									@endif
 		    						<p> {{ $casa->recamara}} cuarto(s), {{ $casa->bano}} baño(s), {{ $casa->mediobano}} medio baño(s), {{ $casa->estacionamiento}} estacionamiento(s) </p>
 		    						<p> <a href= " {{url( '/casa', $casa->id)}}"> Mostrar Ficha Técnica </a> </p>
 		    						<br/>

@@ -373,7 +373,11 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-  $casa=new App\Casa();
+  $casa=App\Casa::find('62');
+  $casa->imagenes= '17';
+  $casa->save();
+
+  /*$casa=new App\Casa();
   $casa->zona_id='24';
   $casa->calle='Privada de Linares';
   $casa->colonia='El Limbo';
@@ -401,7 +405,7 @@ Route::get('/editar_casas', function()
 
   $casa->ambientes()->attach([2,6,19,26]);
   $casa->servicios()->attach('3');
-  
+  */
 });
 
 /*Route::get('/editar_casa', function()

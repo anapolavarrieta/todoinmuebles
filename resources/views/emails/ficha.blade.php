@@ -142,7 +142,11 @@
 																				@if (@$casa->tipo == 'T')
 																					<p> Precio por m2: ${{ $english_format_number = number_format(@$casa->precio)}} USD</p>
 																				@else
-																					<p>Precio: ${{ $english_format_number = number_format(@$casa->precio)}} </p>
+																					@if ($casa->id == '60' or $casa->id == '61')
+																						<p> Precio: ${{ $english_format_number = number_format($casa->precio)}} USD </p>
+																					@else
+																						<p> Precio: ${{ $english_format_number = number_format($casa->precio)}} </p>
+																					@endif
 																				@endif
 																			</dl> </br>
 																			<dl>
