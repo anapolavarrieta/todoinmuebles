@@ -373,8 +373,17 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
+  $casa=App\Casa::find('57');
+  $casa->imagenes= '7';
+  $casa->save();
+
+  $casa=App\Casa::find('58');
+  $casa->imagenes= '7';
+  $casa->save();
+
   $casa=App\Casa::find('62');
-  $casa->imagenes= '17';
+  $casa->lat= '19.326087';
+  $casa->long= '-99.262730';
   $casa->save();
 
   /*$casa=new App\Casa();
