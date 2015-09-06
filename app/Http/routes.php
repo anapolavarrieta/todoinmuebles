@@ -373,8 +373,8 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-  $casa=App\Casa::find('7');
-  $casa->estado_compra= 'PV';
+  $casa=App\Casa::find('53');
+  $casa->imagenes= '15';
   $casa->save();
 
   
