@@ -374,8 +374,13 @@ Route::get('/editar_casas', function()
 {
   
 
-  
+  $casa=App\Casa::find('13');
+  $casa->precio= '3215200';
+  $casa->supconst= '103';
+  $casa->estatus= '1';
+  $casa->save();
 
+/*
 
   $casa=new App\Casa();
   $casa->zona_id='5';
@@ -404,7 +409,7 @@ Route::get('/editar_casas', function()
 
    $casa->servicios()->attach('6');
 
-  /*
+  
   $casa=new App\Casa();
   $casa->zona_id='24';
   $casa->calle='Privada de Linares';
