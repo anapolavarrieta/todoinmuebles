@@ -373,16 +373,39 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-  $casa=App\Casa::find('57');
-  $casa->imagenes= '9';
-  $casa->save();
-
-  $casa=App\Casa::find('58');
-  $casa->imagenes= '9';
-  $casa->save();
 
   
-  /*$casa=new App\Casa();
+
+
+  $casa=new App\Casa();
+  $casa->zona_id='5';
+  $casa->calle='Romulo Ofarril';
+  $casa->colonia='Olivar de los Padres';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='18000';
+  $casa->supconst='98';
+  $casa->supterr='0';
+  $casa->antiguedad='1 año';
+  $casa->recamara='2';
+  $casa->bano='2';
+  $casa->mediobano='0';
+  $casa->estacionamiento='2';
+  $casa->descripcion='';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='7';
+  $casa->lat='19.338181';
+  $casa->long='-99.211875';
+  $casa->save(); 
+  
+
+   $casa->servicios()->attach('6');
+
+  /*
+  $casa=new App\Casa();
   $casa->zona_id='24';
   $casa->calle='Privada de Linares';
   $casa->colonia='El Limbo';
