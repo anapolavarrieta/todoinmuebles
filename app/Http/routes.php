@@ -373,33 +373,33 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   $casa=new App\Casa();
-  $casa->zona_id='5';
-  $casa->calle='Av Toluca';
-  $casa->colonia='Olivar de los Padres';
+  $casa->zona_id='9';
+  $casa->calle='Av Vasco de Quiroga';
+  $casa->colonia='Santa Fe';
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='3700000';
-  $casa->supconst='123';
+  $casa->precio='9700000';
+  $casa->supconst='230';
   $casa->supterr='0';
-  $casa->antiguedad='20 años';
-  $casa->recamara='2';
-  $casa->bano='2';
-  $casa->mediobano='0';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Departamento recien remodelado listo para ocuparse, cuenta con sala comedor, cocina equipada, área de lavado, cuarto de servicio, vista a los
-  volcanes, calientito, pisos de madera, baños de marmol, estacionamiento de visitas, 8000mts de jardín con juegos';
+  $casa->antiguedad='3 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Departamento en excelente desarrollo cuenta con 2 recamaras con vestidor, family, terraza, cocina con granito, lavandería, cuarto de servicio,
+  bodega, excelente vista. Amenities: alberca, gym, salón de fiestas, salón de adultos, business center, ludoteca, spa, jardín con juegos y asadores';
   $casa->estatus='1';
   $casa->tipo='D';
   $casa->estado_compra='V';
-  $casa->imagenes='9';
-  $casa->lat='19.339749';
-  $casa->long='-99.217108';
+  $casa->imagenes='13';
+  $casa->lat='19.380533';
+  $casa->long='-99.247871';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([5,6,15,19,20]);
-  $casa->servicios()->attach('4');
+  $casa->ambientes()->attach([5,6,8,14,15,16,18,19,20,26]);
+  $casa->servicios()->attach('1');
 
 /*
   $casa=App\Casa::find('45');
