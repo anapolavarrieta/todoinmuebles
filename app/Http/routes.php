@@ -372,36 +372,39 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
+
+  
+  
   $casa=new App\Casa();
-  $casa->zona_id='9';
-  $casa->calle='Av Vasco de Quiroga';
-  $casa->colonia='Santa Fe';
+  $casa->zona_id='7';
+  $casa->calle='Cormoran';
+  $casa->colonia='Lomas de las Aguilas';
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='9700000';
-  $casa->supconst='230';
-  $casa->supterr='0';
-  $casa->antiguedad='3 años';
+  $casa->precio='5800000';
+  $casa->supconst='200';
+  $casa->supterr='280';
+  $casa->antiguedad='10 años';
   $casa->recamara='3';
   $casa->bano='3';
   $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Departamento en excelente desarrollo cuenta con 2 recamaras con vestidor, family, terraza, cocina con granito, lavandería, cuarto de servicio,
-  bodega, excelente vista. Amenities: alberca, gym, salón de fiestas, salón de adultos, business center, ludoteca, spa, jardín con juegos y asadores';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Excelente casa en fraccionamiento lista para habitarse, en excelente estado de conservación. Recamara principal con vestidor y baño, las otras 2
+  comparten baño, family, bodega, área de lavado, cuarto de servicio, vigilancia las 24 hrs';
   $casa->estatus='1';
-  $casa->tipo='D';
+  $casa->tipo='C';
   $casa->estado_compra='V';
-  $casa->imagenes='13';
-  $casa->lat='19.380533';
-  $casa->long='-99.247871';
+  $casa->imagenes='19';
+  $casa->lat='19.346369';
+  $casa->long='-99.235855';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([5,6,8,14,15,16,18,19,20,26]);
-  $casa->servicios()->attach('1');
-
+  $casa->ambientes()->attach([4,16,19,20]);
+  $casa->servicios()->attach('3');
 /*
+
   $casa=App\Casa::find('45');
   $casa->imagenes= '13';
   $casa->save();
