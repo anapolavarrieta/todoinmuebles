@@ -373,25 +373,35 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
 
-  $casa=App\Casa::find('67');
+  $casa=App\Casa::find('5');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('68');
+  $casa=App\Casa::find('9');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('69');
+  $casa=App\Casa::find('47');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('70');
+  $casa=App\Casa::find('46');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('71');
+  $casa=App\Casa::find('56');
   $casa->estatus= '0';
   $casa->save();
+
+  $casa=App\Casa::find('57');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('58');
+  $casa->estatus= '0';
+  $casa->save();
+
+ 
   /*
   
   $casa=new App\Casa();
