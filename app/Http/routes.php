@@ -373,8 +373,10 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-  
- 
+  $casa=App\Casa::find('82');
+  $casa->estatus= '0';
+  $casa->save();
+/* 
   $casa=new App\Casa();
   $casa->zona_id='8';
   $casa->calle='Halcones';
@@ -403,14 +405,11 @@ Route::get('/editar_casas', function()
   
 
   $casa->ambientes()->attach([2,4,14,16,19,20,23, 25]);
-  $casa->servicios()->attach('1');
+  $casa->servicios()->attach('13');
 
-/*
+
  
- $casa=App\Casa::find('72');
-  $casa->estatus= '0';
-  $casa->save();
-  
+ 
 
   
   $casa=App\Casa::find('5');
