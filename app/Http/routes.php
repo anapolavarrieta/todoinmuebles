@@ -374,37 +374,38 @@ Route::get('/editar_casas', function()
 {
   
   $casa=new App\Casa();
-  $casa->zona_id='31';
-  $casa->calle='Lord Byron';
-  $casa->colonia='Polanco Reforma';
-  $casa->municipio='Miguel Hidalgo';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='4500';
-  $casa->supconst='299';
-  $casa->supterr='0';
-  $casa->antiguedad='15 años';
-  $casa->recamara='3';
-  $casa->bano='3';
+  $casa->zona_id='32';
+  $casa->calle='Fuente de Diana';
+  $casa->colonia='Lomas de Tecamachalco';
+  $casa->municipio='Huixquilucan';
+  $casa->ciudad='';
+  $casa->estado='Edo de México';
+  $casa->precio='1700000';
+  $casa->supconst='600';
+  $casa->supterr='1140';
+  $casa->antiguedad='10 años';
+  $casa->recamara='4';
+  $casa->bano='5';
   $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Excelente departamento en el corazón de Polanco, cuenta con sala comedor, estudio, lavandería, cuarto de servicio, alberca techada, gym spa, jardín,
-  casa club';
+  $casa->estacionamiento='6';
+  $casa->descripcion='Residencia en una sola planta, muy iluminada, con excelentes vistas, 2 recamaras con vestidor, y comparten baño con 2 regaderas, otra con vestidor y
+  baño, la principal con vestidor, closet y baño. Sala comedor, cocina, sala de TV, cuarto de servicio, área de lavado, salón de fiestas con baño, bodega, despacho, squash,
+  jardín';
   $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='7';
-  $casa->lat='19.427440';
-  $casa->long='-99.191015';
+  $casa->tipo='C';
+  $casa->estado_compra='V';
+  $casa->imagenes='20';
+  $casa->lat='19.410329';
+  $casa->long='-99.249633';
   $casa->save(); 
   
 
 
-  $casa->ambientes()->attach([2,8,14,15,19,20,]);
-  $casa->servicios()->attach('4');
+  $casa->ambientes()->attach([2,14,16,19,20]);
+ /* $casa->servicios()->attach('');
 /* 
 
- $casa=App\Casa::find('82');
+   $casa=App\Casa::find('85');
   $casa->estatus= '0';
   $casa->save();
  
