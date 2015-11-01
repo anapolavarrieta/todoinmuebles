@@ -608,9 +608,9 @@ Route::get('/editar_casas', function()
     return 'Se edito';
 });*/
 
-Route::get('/ver_zona', function()
+Route::get('/ver_zona/{id}', function($id)
 {
-  $zona=App\Zona::find('24');
+  $zona=App\Zona::find($id);
 
   return $zona->zona;
 });
