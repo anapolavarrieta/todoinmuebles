@@ -373,6 +373,11 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
+
+   $casa=App\Casa::find('85');
+  $casa->estatus= '0';
+  $casa->save();
+  /* 
   $casa=new App\Casa();
   $casa->zona_id='41';
   $casa->calle='Fuente de Diana';
@@ -403,11 +408,7 @@ Route::get('/editar_casas', function()
 
   $casa->ambientes()->attach([2,14,16,19,20]);
  /* $casa->servicios()->attach('');
-/* 
 
-   $casa=App\Casa::find('85');
-  $casa->estatus= '0';
-  $casa->save();
  
  
 
