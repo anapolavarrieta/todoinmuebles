@@ -373,43 +373,40 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-
-   $casa=App\Casa::find('85');
-  $casa->estatus= '0';
-  $casa->save();
-  /* 
   $casa=new App\Casa();
-  $casa->zona_id='41';
-  $casa->calle='Fuente de Diana';
-  $casa->colonia='Lomas de Tecamachalco';
-  $casa->municipio='Huixquilucan';
-  $casa->ciudad='';
-  $casa->estado='Edo de México';
-  $casa->precio='1700000';
-  $casa->supconst='600';
-  $casa->supterr='1140';
+  $casa->zona_id='42';
+  $casa->calle='Bosques de Toronjos';
+  $casa->colonia='Bosques de las Lomas';
+  $casa->municipio='Miguel Hidalgo';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='9890000';
+  $casa->supconst='315';
+  $casa->supterr='0';
   $casa->antiguedad='10 años';
-  $casa->recamara='4';
-  $casa->bano='5';
+  $casa->recamara='3';
+  $casa->bano='3';
   $casa->mediobano='1';
-  $casa->estacionamiento='6';
-  $casa->descripcion='Residencia en una sola planta, muy iluminada, con excelentes vistas, 2 recamaras con vestidor, y comparten baño con 2 regaderas, otra con vestidor y
-  baño, la principal con vestidor, closet y baño. Sala comedor, cocina, sala de TV, cuarto de servicio, área de lavado, salón de fiestas con baño, bodega, despacho, squash,
-  jardín';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Precioso departamento remodelado hace 6 años. Recibidor, recamara principal con vestidor, otras dos recamaras con closet, todas cion vista la jardín, 
+  acabados de madera y granito, family, cocina equipada con espacio para desayunador, area de lavado, cuarto de servicio, oficina, bodega. En la mejor calle de Bosques, 
+  cerrada con seguridad 24 horas, amenities: 2 jardines, alberca, gimnasio, 2 salones de fiestas';
   $casa->estatus='1';
-  $casa->tipo='C';
+  $casa->tipo='D';
   $casa->estado_compra='V';
-  $casa->imagenes='20';
-  $casa->lat='19.410329';
-  $casa->long='-99.249633';
+  $casa->imagenes='23';
+  $casa->lat='19.379958';
+  $casa->long='-99.264275';
   $casa->save(); 
   
 
 
-  $casa->ambientes()->attach([2,14,16,19,20]);
+  $casa->ambientes()->attach([2,4,6,8,14,15,16,17,19,20,21]);
  /* $casa->servicios()->attach('');
-
- 
+/*
+ $casa=App\Casa::find('85');
+  $casa->estatus= '0';
+  $casa->save();
  
 
   
