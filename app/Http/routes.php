@@ -372,7 +372,36 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
+  $casa=new App\Casa();
+  $casa->zona_id='25';
+  $casa->calle='Tres Picos';
+  $casa->colonia='Polanco Chapultepec';
+  $casa->municipio='Miguel Hidalgo';
+  $casa->ciudad='Cd de México';
+  $casa->estado='DF';
+  $casa->precio='5000';
+  $casa->supconst='100';
+  $casa->supterr='0';
+  $casa->antiguedad='7 años';
+  $casa->recamara='2';
+  $casa->bano='2';
+  $casa->mediobano='1';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Departamento en una de las mejores zonas de polanco. Cuenta con estudio o family, sala, comedor con terraza, cocina equipada, cuarto de servicio,
+  área de lavado, bodega, vigilancia las 24 hrs';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='6';
+  $casa->lat='19.429112';
+  $casa->long='-99.188688';
+  $casa->save(); 
+  
 
+  $casa->ambientes()->attach([2,4,6,16,18,19,20,26,27]);
+  $casa->servicios()->attach('16');
+
+  /*
   $casa=App\Casa::find('5');
   $casa->estatus= '0';
   $casa->save();
@@ -402,37 +431,9 @@ Route::get('/editar_casas', function()
   $casa->save();
 
  
-  /*
   
-  $casa=new App\Casa();
-  $casa->zona_id='7';
-  $casa->calle='Cormoran';
-  $casa->colonia='Lomas de las Aguilas';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='5800000';
-  $casa->supconst='200';
-  $casa->supterr='280';
-  $casa->antiguedad='10 años';
-  $casa->recamara='3';
-  $casa->bano='3';
-  $casa->mediobano='1';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Excelente casa en fraccionamiento lista para habitarse, en excelente estado de conservación. Recamara principal con vestidor y baño, las otras 2
-  comparten baño, family, bodega, área de lavado, cuarto de servicio, vigilancia las 24 hrs';
-  $casa->estatus='1';
-  $casa->tipo='C';
-  $casa->estado_compra='V';
-  $casa->imagenes='19';
-  $casa->lat='19.346369';
-  $casa->long='-99.235855';
-  $casa->save(); 
   
-
-  $casa->ambientes()->attach([4,16,19,20]);
-  $casa->servicios()->attach('15');
-
+  
 
   $casa=App\Casa::find('45');
   $casa->imagenes= '13';
@@ -614,7 +615,11 @@ Route::get('/crear_zona', function()
 
 Route::post('/crear_zona',function()
 {
-	
+	$zona=new App\Zona();
+  $zona->zona=Input::get('zona');
+  $zona->delegacion=Input::get('delegacion');
+  $zona->save(); 
+ 
 
  	return 'Se ha creado la zona';
 });
