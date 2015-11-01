@@ -373,41 +373,40 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-  $casa=App\Casa::find('82');
-  $casa->estatus= '0';
-  $casa->save();
-/* 
   $casa=new App\Casa();
-  $casa->zona_id='8';
-  $casa->calle='Halcones';
-  $casa->colonia='Lomas de Guadalupe';
-  $casa->municipio='Alvaro Obregón';
+  $casa->zona_id='31';
+  $casa->calle='Lord Byron';
+  $casa->colonia='Polanco Reforma';
+  $casa->municipio='Miguel Hidalgo';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='9950000';
-  $casa->supconst='400';
-  $casa->supterr='400';
-  $casa->antiguedad='6 años';
+  $casa->precio='4500';
+  $casa->supconst='299';
+  $casa->supterr='0';
+  $casa->antiguedad='15 años';
   $casa->recamara='3';
-  $casa->bano='4';
+  $casa->bano='3';
   $casa->mediobano='1';
-  $casa->estacionamiento='4';
-  $casa->descripcion='Excelente casa en fraccionamiento con vigilancia 24 hrs, remodelada hace 6 años, recamara principal con gran vestidor, estancia con pisos de madera
-  de salam, despacho, cocina con desayunador, salon de fiestas/gym, jardín 100m2, bodega, cuarto de servicio, área de lavado, acabados de marmol, cantera, sala de TV con 
-  doble alura, pantalla y salidas para cine';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Excelente departamento en el corazón de Polanco, cuenta con sala comedor, estudio, lavandería, cuarto de servicio, alberca techada, gym spa, jardín,
+  casa club';
   $casa->estatus='1';
-  $casa->tipo='C';
-  $casa->estado_compra='V';
-  $casa->imagenes='5';
-  $casa->lat='19.342456';
-  $casa->long='-99.243850';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='7';
+  $casa->lat='19.427440';
+  $casa->long='-99.191015';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([2,4,14,16,19,20,23, 25]);
-  $casa->servicios()->attach('13');
 
+  $casa->ambientes()->attach([2,8,14,15,19,20,]);
+  $casa->servicios()->attach('4');
+/* 
 
+ $casa=App\Casa::find('82');
+  $casa->estatus= '0';
+  $casa->save();
  
  
 
