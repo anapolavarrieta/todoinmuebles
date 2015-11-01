@@ -374,7 +374,7 @@ Route::get('/editar_casas', function()
 {
   
   $casa=new App\Casa();
-  $casa->zona_id='32';
+  $casa->zona_id='41';
   $casa->calle='Fuente de Diana';
   $casa->colonia='Lomas de Tecamachalco';
   $casa->municipio='Huixquilucan';
@@ -674,13 +674,11 @@ Route::get('/editar_servicios', function()
 Route::get('/editar_zona', function()
 {
 
-    $zona=App\Zona::find('26');
-    $zona->zona= 'Error1';
+    $zona=App\Zona::find('32');
+    $zona->zona= 'Error4';
     $zona->save();
 
-    $zona=App\Zona::find('27');
-    $zona->zona= 'Error2';
-    $zona->save();   
+   
 
     
 
