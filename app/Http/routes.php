@@ -372,8 +372,9 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
+  
   $casa=new App\Casa();
-  $casa->zona_id='25';
+  $casa->zona_id='29';
   $casa->calle='Tres Picos';
   $casa->colonia='Polanco Chapultepec';
   $casa->municipio='Miguel Hidalgo';
@@ -401,7 +402,14 @@ Route::get('/editar_casas', function()
   $casa->ambientes()->attach([2,4,6,16,18,19,20,26,27]);
   $casa->servicios()->attach('4');
 
-  /*
+/*
+  $casa=App\Casa::find('72');
+  $casa->zona_id= '29';
+  $casa->save();
+
+  
+
+  
   $casa=App\Casa::find('5');
   $casa->estatus= '0';
   $casa->save();
@@ -664,12 +672,15 @@ Route::get('/editar_servicios', function()
 Route::get('/editar_zona', function()
 {
 
-    $zona= new App\Zona();
-    $zona->zona= 'Polanco Chapultepec';
-    $zona->delegacion= 'Miguel Hidalgo';
+    $zona=App\Zona::find('26');
+    $zona->zona= 'Error1';
     $zona->save();
 
-   
+    $zona=App\Zona::find('27');
+    $zona->zona= 'Error2';
+    $zona->save();   
+
+    
 
    
     return 'Se edito';

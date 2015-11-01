@@ -12,9 +12,7 @@ return [
 	| application. If disabled, a simple generic error page is shown.
 	*/
 
-	'debug' => 'false',
-
-	/*env('APP_DEBUG'),*/
+	'debug' => env('APP_DEBUG'),
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL
