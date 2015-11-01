@@ -610,7 +610,7 @@ Route::get('/editar_casas', function()
 
 Route::get('/ver_zona', function()
 {
-  $zona=App\Zona::find('25');
+  $zona=App\Zona::find('24');
 
   return $zona->zona;
 });
