@@ -664,19 +664,11 @@ Route::get('/editar_zona', function()
 {
 
     $zona= new App\Zona();
-    $zona->zona= 'Lomas de las Palmas';
-    $zona->delegacion= 'Huixquilucan';
+    $zona->zona= 'Polanco Chapultepec';
+    $zona->delegacion= 'Miguel Hidalgo';
     $zona->save();
 
-    $zona= new App\Zona();
-    $zona->zona= 'Lomas de Axomiatla';
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
-
-    $zona= new App\Zona();
-    $zona->zona= 'El Limbo';
-    $zona->delegacion= 'Alvaro Obregón';
-    $zona->save();
+   
 
    
     return 'Se edito';
