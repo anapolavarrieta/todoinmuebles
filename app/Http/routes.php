@@ -619,7 +619,7 @@ Route::get('/editar_casas', function()
 Route::get('/ver_zona', function()
 {
   
-  $zona=App\Zona::all();
+  $zona=App\Casa::all();
 
   return $zona;
 });
