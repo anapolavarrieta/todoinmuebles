@@ -373,40 +373,42 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
+  
+ 
   $casa=new App\Casa();
-  $casa->zona_id='29';
-  $casa->calle='Tres Picos';
-  $casa->colonia='Polanco Chapultepec';
-  $casa->municipio='Miguel Hidalgo';
+  $casa->zona_id='30';
+  $casa->calle='Jardines en la Montaña';
+  $casa->colonia='Jardines en la Montaña';
+  $casa->municipio='Tlalpan';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='5000';
-  $casa->supconst='100';
-  $casa->supterr='0';
-  $casa->antiguedad='7 años';
-  $casa->recamara='2';
-  $casa->bano='2';
+  $casa->precio='7200000';
+  $casa->supconst='224';
+  $casa->supterr='228';
+  $casa->antiguedad='15 años';
+  $casa->recamara='4';
+  $casa->bano='4';
   $casa->mediobano='1';
   $casa->estacionamiento='2';
-  $casa->descripcion='Departamento en una de las mejores zonas de polanco. Cuenta con estudio o family, sala, comedor con terraza, cocina equipada, cuarto de servicio,
-  área de lavado, bodega, vigilancia las 24 hrs';
+  $casa->descripcion='Casa en fraccionamiento en Jardines de la Montaña, 2 recamaras con vestidor y baños, sala de TV, cocina con desayunador, terraza de 25mts, cuarto
+  de servicio, vigilancia privada, puede ser venta o renta';
   $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='6';
-  $casa->lat='19.429112';
-  $casa->long='-99.188688';
+  $casa->tipo='C';
+  $casa->estado_compra='V';
+  $casa->imagenes='13';
+  $casa->lat='19.301233';
+  $casa->long='-99.204098';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([2,4,6,16,18,19,20,26,27]);
+  $casa->ambientes()->attach([4,20,26]);
   $casa->servicios()->attach('4');
 
 /*
-  $casa=App\Casa::find('72');
-  $casa->zona_id= '29';
+ 
+ $casa=App\Casa::find('72');
+  $casa->estatus= '0';
   $casa->save();
-
   
 
   
