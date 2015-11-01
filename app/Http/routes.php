@@ -608,6 +608,13 @@ Route::get('/editar_casas', function()
     return 'Se edito';
 });*/
 
+Route::get('/ver_zona', function()
+{
+  $zona=App\Zona::find('25');
+
+  return $zona->zona;
+});
+
 Route::get('/crear_zona', function()
 {
 	return View::make('crearzona');
