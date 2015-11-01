@@ -399,7 +399,7 @@ Route::get('/editar_casas', function()
   
 
   $casa->ambientes()->attach([2,4,6,16,18,19,20,26,27]);
-  $casa->servicios()->attach('16');
+  $casa->servicios()->attach('4');
 
   /*
   $casa=App\Casa::find('5');
