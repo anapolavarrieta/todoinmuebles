@@ -376,33 +376,34 @@ Route::get('/editar_casas', function()
   
  
   $casa=new App\Casa();
-  $casa->zona_id='30';
-  $casa->calle='Jardines en la Montaña';
-  $casa->colonia='Jardines en la Montaña';
-  $casa->municipio='Tlalpan';
+  $casa->zona_id='8';
+  $casa->calle='Halcones';
+  $casa->colonia='Lomas de Guadalupe';
+  $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de México';
   $casa->estado='DF';
-  $casa->precio='7200000';
-  $casa->supconst='224';
-  $casa->supterr='228';
-  $casa->antiguedad='15 años';
-  $casa->recamara='4';
+  $casa->precio='9950000';
+  $casa->supconst='400';
+  $casa->supterr='400';
+  $casa->antiguedad='6 años';
+  $casa->recamara='3';
   $casa->bano='4';
   $casa->mediobano='1';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Casa en fraccionamiento en Jardines de la Montaña, 2 recamaras con vestidor y baños, sala de TV, cocina con desayunador, terraza de 25mts, cuarto
-  de servicio, vigilancia privada, puede ser venta o renta';
+  $casa->estacionamiento='4';
+  $casa->descripcion='Excelente casa en fraccionamiento con vigilancia 24 hrs, remodelada hace 6 años, recamara principal con gran vestidor, estancia con pisos de madera
+  de salam, despacho, cocina con desayunador, salon de fiestas/gym, jardín 100m2, bodega, cuarto de servicio, área de lavado, acabados de marmol, cantera, sala de TV con 
+  doble alura, pantalla y salidas para cine';
   $casa->estatus='1';
   $casa->tipo='C';
   $casa->estado_compra='V';
-  $casa->imagenes='13';
-  $casa->lat='19.301233';
-  $casa->long='-99.204098';
+  $casa->imagenes='5';
+  $casa->lat='19.342456';
+  $casa->long='-99.243850';
   $casa->save(); 
   
 
-  $casa->ambientes()->attach([4,20,26]);
-  $casa->servicios()->attach('4');
+  $casa->ambientes()->attach([2,4,14,16,19,20,23, 25]);
+  $casa->servicios()->attach('1');
 
 /*
  
