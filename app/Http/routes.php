@@ -374,34 +374,32 @@ Route::get('/editar_casas', function()
 {
   
   $casa=new App\Casa();
-  $casa->zona_id='42';
-  $casa->calle='Bosques de Toronjos';
-  $casa->colonia='Bosques de las Lomas';
-  $casa->municipio='Miguel Hidalgo';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='9890000';
-  $casa->supconst='315';
+  $casa->zona_id='43';
+  $casa->calle='Lomas Country';
+  $casa->colonia='Lomas Country club';
+  $casa->municipio='Huixquilucan';
+  $casa->ciudad='';
+  $casa->estado='Edo de México';
+  $casa->precio='6500000';
+  $casa->supconst='379';
   $casa->supterr='0';
-  $casa->antiguedad='10 años';
+  $casa->antiguedad='5 años';
   $casa->recamara='3';
   $casa->bano='3';
   $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Precioso departamento remodelado hace 6 años. Recibidor, recamara principal con vestidor, otras dos recamaras con closet, todas cion vista la jardín, 
-  acabados de madera y granito, family, cocina equipada con espacio para desayunador, area de lavado, cuarto de servicio, oficina, bodega. En la mejor calle de Bosques, 
-  cerrada con seguridad 24 horas, amenities: 2 jardines, alberca, gimnasio, 2 salones de fiestas';
+  $casa->estacionamiento='4';
+  $casa->descripcion='Hermoso garden house recamaras con vestidor, cuarto de TV, amplia estancia, cocina equipada, lavandería, cuarto de servicio, bodega';
   $casa->estatus='1';
   $casa->tipo='D';
   $casa->estado_compra='V';
-  $casa->imagenes='23';
-  $casa->lat='19.379958';
-  $casa->long='-99.264275';
+  $casa->imagenes='17';
+  $casa->lat='19.403965';
+  $casa->long='-99.282931';
   $casa->save(); 
   
 
 
-  $casa->ambientes()->attach([2,4,6,8,14,15,16,17,19,20,21]);
+  $casa->ambientes()->attach([6,16,19,20]);
  /* $casa->servicios()->attach('');
 /*
  $casa=App\Casa::find('85');
