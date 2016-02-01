@@ -373,7 +373,11 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   
-  $casa=new App\Casa();
+  $casa=App\Casa::find('6');
+  $casa->estatus= '0';
+  $casa->save();
+
+/*  $casa=new App\Casa();
   $casa->zona_id='43';
   $casa->calle='Lomas Country';
   $casa->colonia='Lomas Country club';
@@ -400,7 +404,7 @@ Route::get('/editar_casas', function()
 
 
   $casa->ambientes()->attach([6,16,19,20]);
- /* $casa->servicios()->attach('');
+  $casa->servicios()->attach('');
 /*
  $casa=App\Casa::find('85');
   $casa->estatus= '0';
