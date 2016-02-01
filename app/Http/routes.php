@@ -372,12 +372,63 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  
-  $casa=App\Casa::find('89');
+  $casa=App\Casa::find('90');
   $casa->estatus= '0';
   $casa->save();
 
-/*  $casa=new App\Casa();
+  $casa=App\Casa::find('91');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('92');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('93');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('94');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('95');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('96');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('97');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('98');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('99');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('100');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('101');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('102');
+  $casa->estatus= '0';
+  $casa->save();
+  
+
+/*  
+  
+
+$casa=new App\Casa();
   $casa->zona_id='43';
   $casa->calle='Lomas Country';
   $casa->colonia='Lomas Country club';
@@ -400,9 +451,6 @@ Route::get('/editar_casas', function()
   $casa->lat='19.403965';
   $casa->long='-99.282931';
   $casa->save(); 
-  
-
-
   $casa->ambientes()->attach([6,16,19,20]);
   $casa->servicios()->attach('');
 /*
