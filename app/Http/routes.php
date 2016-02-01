@@ -372,14 +372,33 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=App\Casa::find('24');
-  $casa->precio= '5500000';
-  $casa->save();
+  $casa=new App\Casa();
+  $casa->zona_id='3';
+  $casa->calle='Antonio Noemi';
+  $casa->colonia='Lomas de Memetla';
+  $casa->municipio='Cuajimalpa de Morelos';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='2300000';
+  $casa->supconst='103';
+  $casa->supterr='0';
+  $casa->antiguedad='1 año';
+  $casa->recamara='1';
+  $casa->bano='1';
+  $casa->mediobano='0';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Para estrenar, excelente departamento totalmente amueblado con roof privado, vigilancia 24hrs. A 5 min de Santa Fe';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='V';
+  $casa->imagenes='15';
+  $casa->lat='19.356859';
+  $casa->long='-99.288783';
+  $casa->save(); 
+  $casa->ambientes()->attach([4,21,24,27]);
+  $casa->servicios()->attach('3');
 
-  $casa=App\Casa::find('45');
-  $casa->precio= '10500000';
-  $casa->imagenes='11';
-  $casa->save();
+
 
 
 
@@ -414,6 +433,15 @@ $casa=new App\Casa();
   $casa->ambientes()->attach([6,16,19,20]);
   $casa->servicios()->attach('');
 /*
+
+$casa=App\Casa::find('24');
+  $casa->precio= '5500000';
+  $casa->save();
+
+  $casa=App\Casa::find('45');
+  $casa->precio= '10500000';
+  $casa->imagenes='11';
+  $casa->save();
  $casa=App\Casa::find('85');
   $casa->estatus= '0';
   $casa->save();
@@ -632,6 +660,7 @@ Route::get('/ver_zona', function()
   $zona=App\Zona::all();
 
   return $zona;
+
 });
 
 Route::get('/crear_zona', function()
