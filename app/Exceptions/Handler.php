@@ -39,4 +39,14 @@ class Handler extends ExceptionHandler {
 		return parent::render($request, $e);
 	}
 
+
+App::error(function(Illuminate\Session\TokenMismatchException $exception, $code)
+{
+    /**
+     * Redirect to the last step
+     * Refill any old inputs except _token (it would override our new token)
+     * Set the error message
+     */
+    return Redirect::to('/errors/token-mismatch-error');
+});
 }

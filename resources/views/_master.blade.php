@@ -22,7 +22,9 @@
 <link rel="stylesheet" type="text/css" href="{{URL::asset('/engine2/style.css')}}" />
 <script type="text/javascript" src="{{URL::asset('/engine2/jquery.js')}}"></script>
 <meta name="csrf-token" content="{{ csrf_token() }}">
+
 <!-- End WOWSlider.com HEAD section -->
+
 </head>
 
 <body>
