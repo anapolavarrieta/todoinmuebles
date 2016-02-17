@@ -372,7 +372,22 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=new App\Casa();
+ 
+  $casa=App\Casa::find('104');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('105');
+  $casa->estatus= '0';
+  $casa->save();
+
+  $casa=App\Casa::find('106');
+  $casa->estatus= '0';
+  $casa->save();
+
+/*  
+  
+   $casa=new App\Casa();
   $casa->zona_id='3';
   $casa->calle='Antonio Noemi';
   $casa->colonia='Lomas de Memetla';
@@ -404,8 +419,7 @@ Route::get('/editar_casas', function()
 
   
 
-/*  
-  
+
 
 $casa=new App\Casa();
   $casa->zona_id='43';
