@@ -74,7 +74,9 @@
 			<dl>
 				@if ($casa->tipo == 'T')
 					<dt>Precio por m2 </dt>
+					@if ($casa->id == '40')
 					<dd> ${{ $english_format_number = number_format($casa->precio)}} USD</dd>
+					@endif
 				@else
 					<dt>Precio </dt>
 					@if ($compra == 'preventa')
@@ -85,7 +87,7 @@
 						<dd> ${{ $english_format_number = number_format($casa->precio)}} </dd>
 						@endif
 					@else
-						@if ($casa->id == '60' or $casa->id == '61' or $casa->id == '80'  or $casa->id == '84' or $casa->id == '86' )
+						@if ($casa->id == '60' or $casa->id == '61' or $casa->id == '80'  or $casa->id == '84' or $casa->id == '86'  or $casa->id == '112')
 							<dd> ${{ $english_format_number = number_format($casa->precio)}} USD </dd>
 						@else
 							<dd> ${{ $english_format_number = number_format($casa->precio)}} </dd>

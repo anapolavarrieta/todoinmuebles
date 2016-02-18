@@ -385,34 +385,235 @@ Route::get('/editar_casas', function()
   $casa->estatus= '0';
   $casa->save();
 
+  $casa=App\Casa::find('14');
+  $casa->estatus= '1';
+  $casa->precio= '3900000';
+  $casa->imagenes='19';
+  $casa->save();
+
 
   
-   $casa=new App\Casa();
+  $casa=new App\Casa();
   $casa->zona_id='1';
-  $casa->calle='Arteaga y Salazar';
+  $casa->calle='Antonio Noemi';
   $casa->colonia='Contadero';
   $casa->municipio='Cuajimalpa de Morelos';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='9850000';
-  $casa->supconst='328';
-  $casa->supterr='300';
+  $casa->precio='2897500';
+  $casa->supconst='66';
+  $casa->supterr='0';
+  $casa->antiguedad='1 año';
+  $casa->recamara='1';
+  $casa->bano='1';
+  $casa->mediobano='0';
+  $casa->estacionamiento='1';
+  $casa->descripcion='Departamento nuevo a 5 minutos de Santa Fe en un exclusivo desarrollo de 46 departamentos, entrega en Abril, departamentos de 1 o 2 recamaras. 
+  Disponibilidad sujeta a existencias. Amenities: Carril de nado, gym, asadores con jardín';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='PV';
+  $casa->imagenes='33';
+  $casa->lat='19.356928';
+  $casa->long='-99.288684';
+  $casa->save(); 
+  $casa->ambientes()->attach([8,14,15,21]);
+  $casa->servicios()->attach('3');
+
+  $casa=new App\Casa();
+  $casa->zona_id='41';
+  $casa->calle='Fuente de Acueducto';
+  $casa->colonia='Lomas de Tecamachalco';
+  $casa->municipio='Naucalpan';
+  $casa->ciudad='';
+  $casa->estado='Estado de México';
+  $casa->precio='45000';
+  $casa->supconst='300';
+  $casa->supterr='400';
   $casa->antiguedad='1 año';
   $casa->recamara='3';
-  $casa->bano='4';
+  $casa->bano='3';
   $casa->mediobano='1';
-  $casa->estacionamiento='4';
-  $casa->descripcion='Casa en preventa entrega en Diciembre 2016. Sólo 4 casas con 100m2 de jardín privado cada una, más 900m2 de áreas comunes, garage, salón de 
-  juegos por casa. Visita bajo previa cita';
+  $casa->estacionamiento='6';
+  $casa->descripcion='Casas nuevas en condominio, recamaras con vestidor y baño. Family, sala comedor, cocina equipada, alacena, jardín privado de 100m2, área de lavado,
+  cuarto de servicio, vigilancia. Disponible a partir del 15 de febrero';
   $casa->estatus='1';
   $casa->tipo='C';
-  $casa->estado_compra='PV';
-  $casa->imagenes='6';
-  $casa->lat='19.345068';
-  $casa->long='-99.302970';
+  $casa->estado_compra='R';
+  $casa->imagenes='11';
+  $casa->lat='19.421050';
+  $casa->long='-99.237644';
   $casa->save(); 
-  $casa->ambientes()->attach([14,15,18,23]);
+  $casa->ambientes()->attach([2,4,6,13,19,20,23]);
   $casa->servicios()->attach('3');
+
+  $casa=new App\Casa();
+  $casa->zona_id='1';
+  $casa->calle='División del Norte';
+  $casa->colonia='Contadero';
+  $casa->municipio='Cuajimalpa de Morelos';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='3000000';
+  $casa->supconst='155';
+  $casa->supterr='0';
+  $casa->antiguedad='15 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='0';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Departamento en excelente estado, recamara principal con vestidor y baño, cocina equipada, área de lavado, vigilancia 24hrs. Para inversionistas
+  ya que cuenta con un inquilino';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='0';
+  $casa->lat='19.356503';
+  $casa->long='-99.286748';
+  $casa->save(); 
+  $casa->ambientes()->attach([4,6,19]);
+  $casa->servicios()->attach('1');
+
+  $casa=new App\Casa();
+  $casa->zona_id='5';
+  $casa->calle='Romulo Ofarril';
+  $casa->colonia='Olivar de los Padres';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='3000000';
+  $casa->supconst='60';
+  $casa->supterr='0';
+  $casa->antiguedad='1 año';
+  $casa->recamara='1';
+  $casa->bano='1';
+  $casa->mediobano='1';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Departamento para estrenar con cocina integral abierta, vigilancia 24 hrs. Amenities: gym, salón de fiestas, cancha de fut y basket, ludoteca, áreas
+  verdes con juegos infantiles, jardín con asador, sky lounge';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='V';
+  $casa->imagenes='5';
+  $casa->lat='19.338182';
+  $casa->long='-99.213555';
+  $casa->save(); 
+  $casa->ambientes()->attach([4,6,14, 15]);
+  $casa->servicios()->attach('5');
+
+  $casa=new App\Casa();
+  $casa->zona_id='9';
+  $casa->calle='Cumbres de Santa Fe';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='6000';
+  $casa->supconst='381';
+  $casa->supterr='0';
+  $casa->antiguedad='5 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='5';
+  $casa->descripcion='Hermoso departamento estilo contemporaneo en exclusivo desarrollo, 3 recamaras con walk in closet y baño, sala comedor, biblioteca, cuarto de 
+  lavandería, despensa, cuarto de servicio. Amenities: casa club con alberca, jacuzzi, sauna, gym, cancha de tennis y paddel, jardines, juegos infantiles, bar y 
+  cafetería.';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='R';
+  $casa->imagenes='6';
+  $casa->lat='19.348669';
+  $casa->long='-99.262640';
+  $casa->save(); 
+  $casa->ambientes()->attach([2,8,13,14,15,19,20]);
+  $casa->servicios()->attach('3');
+
+  $casa=new App\Casa();
+  $casa->zona_id='3';
+  $casa->calle='Zotitla';
+  $casa->colonia='Lomas de Memetla';
+  $casa->municipio='Cuajimalpa de Morelos';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='8000000';
+  $casa->supconst='275';
+  $casa->supterr='187';
+  $casa->antiguedad='10 años';
+  $casa->recamara='4';
+  $casa->bano='5';
+  $casa->mediobano='1';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Se vende casa en contadero a 5 minutos de Santa Fe, recamara principal con walkin closet y baño completo con regadera y tarjas dobles, recamaras
+  adicionales con baño completo y closet, sala comedor, estudio con baño completo, área de lavado, cuarto de servicio y bodega';
+  $casa->estatus='1';
+  $casa->tipo='C';
+  $casa->estado_compra='V';
+  $casa->imagenes='20';
+  $casa->lat='19.351808';
+  $casa->long='-99.292191';
+  $casa->save(); 
+  $casa->ambientes()->attach([2,16,19,20]);
+  $casa->servicios()->attach('1');
+
+  $casa=new App\Casa();
+  $casa->zona_id='23';
+  $casa->calle='Calzada de las Aguilas';
+  $casa->colonia='Lomas De Axomiatla';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='17000000';
+  $casa->supconst='520';
+  $casa->supterr='500';
+  $casa->antiguedad='15 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='4';
+  $casa->descripcion='Excelente casa en fraccionamiento La Cima. Recamara principal con vestidor, 2 families, sala, comedor, cocina equipada con alacena, antecomedor, 
+  estudio, jardín privado de 150m2, rodeada del bosque, área de lavado, cuarto de servicio, 2 bodegas, en excelentes condiciones, pisos de madera. Áreas comunes: pista 
+  de jogging, salón de fiestas, cancha de tennis y futbol.';
+  $casa->estatus='1';
+  $casa->tipo='C';
+  $casa->estado_compra='V';
+  $casa->imagenes='29';
+  $casa->lat='19.346730';
+  $casa->long='-99.236579';
+  $casa->save(); 
+  $casa->ambientes()->attach([2,6,11,13,14,16,19,20,23]);
+  $casa->servicios()->attach('4');
+
+  $casa=new App\Casa();
+  $casa->zona_id='18';
+  $casa->calle='Lomas Country';
+  $casa->colonia='Interlomas';
+  $casa->municipio='Huixquilucan';
+  $casa->ciudad='';
+  $casa->estado='Estado de México';
+  $casa->precio='8000000';
+  $casa->supconst='240';
+  $casa->supterr='0';
+  $casa->antiguedad='7 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Departamento en excelente estado, recamara principal con vestidor, family, closets de blancos, cocina de equipada, área de lavado, cuarto de
+  servicio, bodega. Amenities: alberca, padel, gym, jardín con juegos infantiles y salón de fiestas. Puede venderse para inversionistas ya que actualmente cuenta
+  con un inquilino y renta en $38,000';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='V';
+  $casa->imagenes='18';
+  $casa->lat='19.403965';
+  $casa->long='-99.282931';
+  $casa->save(); 
+  $casa->ambientes()->attach([2,6,8,14,15,16,19,20]);
+  $casa->servicios()->attach('1');
+
+  
+
 
 
 /*  
