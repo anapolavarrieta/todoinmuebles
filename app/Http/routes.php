@@ -391,293 +391,46 @@ Route::get('/editar_casas', function()
   $casa->imagenes='19';
   $casa->save();
 
-/*
+
   
   $casa=new App\Casa();
-  $casa->zona_id='1';
-  $casa->calle='Antonio Noemi';
-  $casa->colonia='Contadero';
-  $casa->municipio='Cuajimalpa de Morelos';
+  $casa->zona_id='44';
+  $casa->calle='Av de las Torres';
+  $casa->colonia='Col Torres del Potrero';
+  $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='2897500';
-  $casa->supconst='66';
-  $casa->supterr='0';
-  $casa->antiguedad='1 año';
-  $casa->recamara='1';
-  $casa->bano='1';
-  $casa->mediobano='0';
-  $casa->estacionamiento='1';
-  $casa->descripcion='Departamento nuevo a 5 minutos de Santa Fe en un exclusivo desarrollo de 46 departamentos, entrega en Abril, departamentos de 1 o 2 recamaras. 
-  Disponibilidad sujeta a existencias. Amenities: Carril de nado, gym, asadores con jardín';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='PV';
-  $casa->imagenes='33';
-  $casa->lat='19.356928';
-  $casa->long='-99.288684';
-  $casa->save(); 
-  $casa->ambientes()->attach([8,14,15,21]);
-  $casa->servicios()->attach('3');
-
-
-
-  
-
-
-
-  
-
-  
-
-
-
-$casa=new App\Casa();
-  $casa->zona_id='43';
-  $casa->calle='Lomas Country';
-  $casa->colonia='Lomas Country club';
-  $casa->municipio='Huixquilucan';
-  $casa->ciudad='';
-  $casa->estado='Edo de México';
-  $casa->precio='6500000';
-  $casa->supconst='379';
-  $casa->supterr='0';
-  $casa->antiguedad='5 años';
-  $casa->recamara='3';
-  $casa->bano='3';
-  $casa->mediobano='1';
-  $casa->estacionamiento='4';
-  $casa->descripcion='Hermoso garden house recamaras con vestidor, cuarto de TV, amplia estancia, cocina equipada, lavandería, cuarto de servicio, bodega';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='V';
-  $casa->imagenes='17';
-  $casa->lat='19.403965';
-  $casa->long='-99.282931';
-  $casa->save(); 
-  $casa->ambientes()->attach([6,16,19,20]);
-  $casa->servicios()->attach('');
-/*
-
-$casa=App\Casa::find('24');
-  $casa->precio= '5500000';
-  $casa->save();
-
-  $casa=App\Casa::find('45');
-  $casa->precio= '10500000';
-  $casa->imagenes='11';
-  $casa->save();
- $casa=App\Casa::find('85');
-  $casa->estatus= '0';
-  $casa->save();
- 
-
-  
-  $casa=App\Casa::find('5');
-  $casa->estatus= '0';
-  $casa->save();
-
-  $casa=App\Casa::find('9');
-  $casa->estatus= '0';
-  $casa->save();
-
-  $casa=App\Casa::find('47');
-  $casa->estatus= '0';
-  $casa->save();
-
-  $casa=App\Casa::find('46');
-  $casa->estatus= '0';
-  $casa->save();
-
-  $casa=App\Casa::find('56');
-  $casa->estatus= '0';
-  $casa->save();
-
-  $casa=App\Casa::find('57');
-  $casa->estatus= '0';
-  $casa->save();
-
-  $casa=App\Casa::find('58');
-  $casa->estatus= '0';
-  $casa->save();
-
- 
-  
-  
-  
-
-  $casa=App\Casa::find('45');
-  $casa->imagenes= '13';
-  $casa->save();
-
-
-
-  $casa=new App\Casa();
-  $casa->zona_id='5';
-  $casa->calle='Romulo Ofarril';
-  $casa->colonia='Olivar de los Padres';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='18000';
-  $casa->supconst='98';
-  $casa->supterr='0';
-  $casa->antiguedad='1 año';
+  $casa->precio='4550000';
+  $casa->supconst='140';
+  $casa->supterr='';
+  $casa->antiguedad='2 años';
   $casa->recamara='2';
   $casa->bano='2';
-  $casa->mediobano='0';
-  $casa->estacionamiento='2';
-  $casa->descripcion='';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='7';
-  $casa->lat='19.338181';
-  $casa->long='-99.211875';
-  $casa->save(); 
-  
-
-   $casa->servicios()->attach('6');
-
-  
-  $casa=new App\Casa();
-  $casa->zona_id='24';
-  $casa->calle='Privada de Linares';
-  $casa->colonia='El Limbo';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='4000000';
-  $casa->supconst='270';
-  $casa->supterr='270';
-  $casa->antiguedad='20 años';
-  $casa->recamara='3';
-  $casa->bano='2';
   $casa->mediobano='1';
   $casa->estacionamiento='2';
-  $casa->descripcion='Casa para remodelar, recamara principal con vestidor, cuarto que se puede ocupar de oficina, family, juegos, amplia cocina equipada, área de lavado,
-  terraza alrededor de la casa';
+  $casa->descripcion='Excelente departamento con vista espectacular. Opción a tercera recamara, sala de TV, cocina integral y área de lavado. Casa club con alberca,
+  salón de fiestas, sala para niños, sala jóvenes y sala adultos, jardín y 3 terrazas. Ubicado junto a Universidad Anahuac Sur y supervia poniente';
   $casa->estatus='1';
-  $casa->tipo='C';
+  $casa->tipo='D';
   $casa->estado_compra='V';
   $casa->imagenes='18';
-  $casa->lat='';
-  $casa->long='';
+  $casa->lat='19.330885';
+  $casa->long='-99.248423';
   $casa->save(); 
-  
+  $casa->ambientes()->attach([2,6,8,14,15,19]);
+  $casa->servicios()->attach('6');
 
-  $casa->ambientes()->attach([2,6,19,26]);
-  $casa->servicios()->attach('3');
+
+/*
   */
-});
-
-/*Route::get('/editar_casa', function()
-{
-  
-  $casa=App\Casa::find('53');
-  $casa->ambientes()->detach('14');
-  $casa->save();
-
-  
-   $casa=new App\Casa();
-  $casa->zona_id='9';
-   $casa->estatus='1';
-    $casa->save(); 
-
-  $casa=new App\Casa();
-  $casa->zona_id='9';
-  $casa->calle='Av Santa Fe';
-  $casa->colonia='Santa Fe';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='21500';
-  $casa->supconst='83';
-  $casa->supterr='0';
-  $casa->antiguedad='1 año';
-  $casa->recamara='1';
-  $casa->bano='1';
-  $casa->mediobano='1';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Departamento en uno de los mejores desarrollos de Santa Fe, recamara con vestidor, family, cocina abierta, bodega. Amenities: alberca, paddle, 
-  gym, salón de adultos, salón de proyecciones, jardín con asadores, salón de fiestas, vigilancia 24hrs, poliza jurídica';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='0';
-  $casa->lat='19.357024';
-  $casa->long='-99.275685';
-  $casa->save(); 
-  
-
-  $casa->ambientes()->attach('4,14,16,18');
-  $casa->servicios()->attach('15');
 
 
-  
-  $casa=new App\Casa();
-  $casa->zona_id='9';
-  $casa->calle='Av Vasco de Quiroga';
-  $casa->colonia='Santa Fe';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='33000';
-  $casa->supconst='260';
-  $casa->supterr='0';
-  $casa->antiguedad='15 años';
-  $casa->recamara='3';
-  $casa->bano='3';
-  $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Amplisimo departamento, recamara principal con vestidor, family, cocina equipada, área de lavado, cuarto de servicio. Amenities: alberca, cancha de
-  paddle, salón de fiestas, juegos infantiles, gym';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='5';
-  $casa->lat='19.375667';
-  $casa->long='-99.255745';
-  
-  $casa->save(); 
-  
 
-  $casa->ambientes()->attach('6,14,19,20');
-  $casa->servicios()->attach('13');
 
-  
 
-  $casa=new App\Casa();
-  $casa->zona_id='9';
-  $casa->calle='Av Santa Fe High Park';
-  $casa->colonia='Santa Fe';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de México';
-  $casa->estado='DF';
-  $casa->precio='18000';
-  $casa->supconst='82';
-  $casa->supterr='0';
-  $casa->antiguedad='3 años';
-  $casa->recamara='2';
-  $casa->bano='1';
-  $casa->mediobano='0';
-  $casa->estacionamiento='1';
-  $casa->descripcion='Excelente departamento listo para habitar, estudio, cocina abierta, vista panorámica, vigilancia privada. Amenities: gym, alberca, cine, salón de
-  adultos, cancha de paddle, ludoteca, business center, spa, asadores, jardín';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='R';
-  $casa->imagenes='0';
-  $casa->lat='19.359484';
-  $casa->long='-99.270687';
-  $casa->save(); 
-  
-
-  $casa->ambientes()->attach('2,4,5,8,14,23');
-  $casa->servicios()->attach('15');
    
     return 'Se edito';
-});*/
+});
 
 Route::get('/ver_zona', function()
 {
