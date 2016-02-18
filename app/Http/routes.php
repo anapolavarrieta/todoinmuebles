@@ -385,37 +385,37 @@ Route::get('/editar_casas', function()
   $casa->estatus= '0';
   $casa->save();
 
-/*  
+
   
    $casa=new App\Casa();
-  $casa->zona_id='3';
-  $casa->calle='Antonio Noemi';
-  $casa->colonia='Lomas de Memetla';
+  $casa->zona_id='1';
+  $casa->calle='Arteaga y Salazar';
+  $casa->colonia='Contadero';
   $casa->municipio='Cuajimalpa de Morelos';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='2300000';
-  $casa->supconst='103';
-  $casa->supterr='0';
+  $casa->precio='9850000';
+  $casa->supconst='328';
+  $casa->supterr='300';
   $casa->antiguedad='1 año';
-  $casa->recamara='1';
-  $casa->bano='1';
-  $casa->mediobano='0';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Para estrenar, excelente departamento totalmente amueblado con roof privado, vigilancia 24hrs. A 5 min de Santa Fe';
+  $casa->recamara='3';
+  $casa->bano='4';
+  $casa->mediobano='1';
+  $casa->estacionamiento='4';
+  $casa->descripcion='Casa en preventa entrega en Diciembre 2016. Sólo 4 casas con 100m2 de jardín privado cada una, más 900m2 de áreas comunes, garage, salón de 
+  juegos por casa. Visita bajo previa cita';
   $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='V';
-  $casa->imagenes='15';
-  $casa->lat='19.356859';
-  $casa->long='-99.288783';
+  $casa->tipo='C';
+  $casa->estado_compra='PV';
+  $casa->imagenes='6';
+  $casa->lat='19.345068';
+  $casa->long='-99.302970';
   $casa->save(); 
-  $casa->ambientes()->attach([4,21,24,27]);
+  $casa->ambientes()->attach([14,15,18,23]);
   $casa->servicios()->attach('3');
 
 
-
-
+/*  
 
   
 

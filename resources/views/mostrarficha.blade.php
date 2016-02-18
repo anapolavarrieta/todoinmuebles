@@ -78,8 +78,12 @@
 				@else
 					<dt>Precio </dt>
 					@if ($compra == 'preventa')
+						@if ($casa->tipo == 'D')
 						<dd> Desde ${{ $english_format_number = number_format($casa->precio)}} </dd>
 						<dd> <a href= '../../images/PV{{$casa->id}}.pdf') target="_blank"> Mostrar opciones </dt></a> </dd>
+						@else
+						<dd> ${{ $english_format_number = number_format($casa->precio)}} </dd>
+						@endif
 					@else
 						@if ($casa->id == '60' or $casa->id == '61' or $casa->id == '80'  or $casa->id == '84' or $casa->id == '86' )
 							<dd> ${{ $english_format_number = number_format($casa->precio)}} USD </dd>
