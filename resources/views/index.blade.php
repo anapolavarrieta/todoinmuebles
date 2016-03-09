@@ -10,16 +10,24 @@
       <div class="ws_images">
         <ul>
           @foreach ($casas as $casa)
-            <li><a href='/casa/{{$casa->id}}' target="_blank"><img src="data2/images/casa{{$casa->id}}/imagen1.jpg" alt="Imagen{{$i}}" title="Zona: {{$casa->colonia}}" id="wows1_0"/></a></li>
-            {{$i= $i+1}}
+            @if($casa->id==61)
+              {{$i= $i+1}}
+            @else
+              <li><a href='/casa/{{$casa->id}}' target="_blank"><img src="data2/images/casa{{$casa->id}}/imagen1.jpg" alt="Imagen{{$i}}" title="Zona: {{$casa->colonia}}" id="wows1_0"/></a></li>
+              {{$i= $i+1}}
+            @endif
           @endforeach
         </ul>
       </div>
     <div class="ws_bullets">
       <div>
         @foreach ($casas as $casa)
-          <a href="#" title="Imagen{{$i2}}"><span><img src="data2/tooltips/casa{{$casa->id}}/imagen1.jpg" alt="Imagen{{$i2}}"/>{{$i2}}</span></a>
-          {{$i2=$i2+1}}
+          @if($casa->id==61)
+            {{$i2=$i2+1}}
+          @else
+            <a href="#" title="Imagen{{$i2}}"><span><img src="data2/tooltips/casa{{$casa->id}}/imagen1.jpg" alt="Imagen{{$i2}}"/>{{$i2}}</span></a>
+            {{$i2=$i2+1}}
+          @endif
         @endforeach
       </div>
     </div>

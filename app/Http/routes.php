@@ -389,6 +389,25 @@ Route::get('/editar_casas', function()
   $casa->estatus= '0';
   $casa->save();
 
+  $casa=App\Casa::find('115');
+  $casa->zona_id='9';
+  $casa->calle= 'Av Vasco dee Quiroga';
+  $casa->colonia='Santa Fe';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->lat='19.375667';
+  $casa->long='-99.255745';
+  $casa->save();
+
+  $casa=App\Casa::find('13');
+  $casa->precio='3850000';
+  $casa->save();
+
+  $casa=App\Casa::find('2');
+  $casa->precio='8500000';
+  $casa->save();
+
 /*
   
   $casa=new App\Casa();
