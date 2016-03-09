@@ -373,25 +373,23 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
  
-  $casa=App\Casa::find('116');
+  $casa=App\Casa::find('118');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('105');
+  $casa=App\Casa::find('119');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('106');
+  $casa=App\Casa::find('120');
   $casa->estatus= '0';
   $casa->save();
 
-  $casa=App\Casa::find('14');
-  $casa->estatus= '1';
-  $casa->precio= '3900000';
-  $casa->imagenes='19';
+  $casa=App\Casa::find('121');
+  $casa->estatus= '0';
   $casa->save();
 
-
+/*
   
   $casa=new App\Casa();
   $casa->zona_id='44';
@@ -418,10 +416,10 @@ Route::get('/editar_casas', function()
   $casa->long='-99.248423';
   $casa->save(); 
   $casa->ambientes()->attach([2,6,8,14,15,19]);
-  $casa->servicios()->attach('6');
+  $casa->servicios()->attach('15');
 
 
-/*
+
   */
 
 
