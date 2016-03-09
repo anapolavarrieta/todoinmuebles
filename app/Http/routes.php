@@ -404,8 +404,8 @@ Route::get('/editar_casas', function()
   $casa->precio='3850000';
   $casa->save();
 
-  $casa=App\Casa::find('2');
-  $casa->precio='8500000';
+  $casa=App\Casa::find('110');
+  $casa->imagenes='9';
   $casa->save();
 
 /*
