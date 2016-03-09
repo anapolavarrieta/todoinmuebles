@@ -364,7 +364,42 @@ Route::post('/crear_casa',function()
 	$casa->save(); 
 	
 
+  $casa->ambientes()->attach(Input::get('ambientes'));
+  $casa->servicios()->attach(Input::get('servicios'));
+  /*$casa->generales()->attach(Input::get('generales'));*/
+  return 'Se ha creado la casa';
+});
 
+Route::get('/editar_casas', function()
+{
+  $casa=new App\Casa();
+  $casa->zona_id='11';
+  $casa->calle='Gutierrez Zamora';
+  $casa->colonia='Las Aguilas';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='4900000';
+  $casa->supconst='122';
+  $casa->supterr='';
+  $casa->antiguedad='1 año';
+  $casa->recamara='2';
+  $casa->bano='2';
+  $casa->mediobano='0';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Departamento para estrenar de 2 recamaras con opción a una tercera o family. Cuenta con área de lavado, cuarto de servicio, 
+  bodega, vigilancia 24 horas, roof garden común, a 5 min de periferico.';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='V';
+  $casa->imagenes='15';
+  $casa->lat='19.358608';
+  $casa->long='-99.208543';
+  $casa->save(); 
+  $casa->ambientes()->attach([2,4,14,16,19,20,21,24]);
+  $casa->servicios()->attach('4');
+
+  
 
  /*
   $casa=App\Casa::find('118');
