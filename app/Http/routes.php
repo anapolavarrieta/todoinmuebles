@@ -372,34 +372,34 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-  $casa=new App\Casa();
-  $casa->zona_id='23';
-  $casa->calle='Ulises';
-  $casa->colonia='Lomas de Axomiatla';
+    $casa=new App\Casa();
+  $casa->zona_id='5';
+  $casa->calle='Nabor Carrillo';
+  $casa->colonia='Olivar de los Padres';
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='8000000';
-  $casa->supconst='240';
-  $casa->supterr='300';
-  $casa->antiguedad='35 años';
+  $casa->precio='6500000';
+  $casa->supconst='205';
+  $casa->supterr='222';
+  $casa->antiguedad='9 años';
   $casa->recamara='3';
-  $casa->bano='3';
+  $casa->bano='4';
   $casa->mediobano='1';
-  $casa->estacionamiento='3';
-  $casa->descripcion='Casa en calle con vigilancia 24 horas, remodelada. Recamara principal con vestidor y baño, las otras 2 recamaras comparten baño. 
-  Cocina integral, desayunador, bodega, área de lavado, cuarto de servicio, jardín de 100m2, con baño, asador, cisterna de 3,000Lts';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Excelente opción en condominio horizontal, con doble vigilancia. Recamara principal con balcón y vestidor. Sala, comedor, 
+  cocina integral, family, salón de usos múltiples, jardín, área de lavado, cuarto de servicio, jardín común con juegos infantiles y salón de fiestas';
   $casa->estatus='1';
   $casa->tipo='C';
   $casa->estado_compra='V';
-  $casa->imagenes='22';
-  $casa->lat='19.340669';
-  $casa->long='-99.250273';
+  $casa->imagenes='28';
+  $casa->lat='19.334252';
+  $casa->long='-99.230965';
   $casa->save(); 
-  $casa->ambientes()->attach([3,4,6,15,16,19,20,23]);
-  $casa->servicios()->attach('7');
+  $casa->ambientes()->attach([4,6,14,15,18,19,20,23,28]);
+  $casa->servicios()->attach('3');
 
-  
+ 
 
  /*
   $casa=App\Casa::find('118');
