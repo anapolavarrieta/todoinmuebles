@@ -373,31 +373,31 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
   $casa=new App\Casa();
-  $casa->zona_id='11';
-  $casa->calle='Gutierrez Zamora';
-  $casa->colonia='Las Aguilas';
+  $casa->zona_id='23';
+  $casa->calle='Ulises';
+  $casa->colonia='Lomas de Axomiatla';
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='4900000';
-  $casa->supconst='122';
-  $casa->supterr='';
-  $casa->antiguedad='1 año';
-  $casa->recamara='2';
-  $casa->bano='2';
-  $casa->mediobano='0';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Departamento para estrenar de 2 recamaras con opción a una tercera o family. Cuenta con área de lavado, cuarto de servicio, 
-  bodega, vigilancia 24 horas, roof garden común, a 5 min de periferico.';
+  $casa->precio='8000000';
+  $casa->supconst='240';
+  $casa->supterr='300';
+  $casa->antiguedad='35 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Casa en calle con vigilancia 24 horas, remodelada. Recamara principal con vestidor y baño, las otras 2 recamaras comparten baño. 
+  Cocina integral, desayunador, bodega, área de lavado, cuarto de servicio, jardín de 100m2, con baño, asador, cisterna de 3,000Lts';
   $casa->estatus='1';
-  $casa->tipo='D';
+  $casa->tipo='C';
   $casa->estado_compra='V';
-  $casa->imagenes='15';
-  $casa->lat='19.358608';
-  $casa->long='-99.208543';
+  $casa->imagenes='22';
+  $casa->lat='19.340669';
+  $casa->long='-99.250273';
   $casa->save(); 
-  $casa->ambientes()->attach([2,4,14,16,19,20,21,24]);
-  $casa->servicios()->attach('4');
+  $casa->ambientes()->attach([3,4,6,15,16,19,20,23]);
+  $casa->servicios()->attach('7');
 
   
 
