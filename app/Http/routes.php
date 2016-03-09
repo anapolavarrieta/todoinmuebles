@@ -372,34 +372,36 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
-    $casa=new App\Casa();
-  $casa->zona_id='5';
-  $casa->calle='Nabor Carrillo';
-  $casa->colonia='Olivar de los Padres';
+  $casa=new App\Casa();
+  $casa->zona_id='45';
+  $casa->calle='Carretera al desierto de los leones';
+  $casa->colonia='Rancho San Francisco';
   $casa->municipio='Alvaro Obregón';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='6500000';
-  $casa->supconst='205';
-  $casa->supterr='222';
-  $casa->antiguedad='9 años';
-  $casa->recamara='3';
+  $casa->precio='26500000';
+  $casa->supconst='860';
+  $casa->supterr='1265';
+  $casa->antiguedad='2 años';
+  $casa->recamara='4';
   $casa->bano='4';
   $casa->mediobano='1';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Excelente opción en condominio horizontal, con doble vigilancia. Recamara principal con balcón y vestidor. Sala, comedor, 
-  cocina integral, family, salón de usos múltiples, jardín, área de lavado, cuarto de servicio, jardín común con juegos infantiles y salón de fiestas';
+  $casa->estacionamiento='8';
+  $casa->descripcion='Hermosa casa en condominio horizontal estilo artigas. 4 recamaras cada una con vestidor, tapanco de 60m2 que podría quedar de
+  5a recamara, family, cuarto de juegos con medio baño, estancia, cuarto de chofer, bodega, área de lavado, cuarto de servicio, cisterna, 
+  hidroneumático, calefacción hidrónica, jardín, planta de tratamiento para aguas jabonosas y uso de riego, chimenea, con acabados de madera salam, 
+  marmol, cantera, vigilancia las 24horas  ';
   $casa->estatus='1';
   $casa->tipo='C';
   $casa->estado_compra='V';
   $casa->imagenes='28';
-  $casa->lat='19.334252';
-  $casa->long='-99.230965';
+  $casa->lat='19.339988';
+  $casa->long='-99.237281';
   $casa->save(); 
-  $casa->ambientes()->attach([4,6,14,15,18,19,20,23,28]);
-  $casa->servicios()->attach('3');
+  $casa->ambientes()->attach([3,4,10,12,18,19,20,22,23]);
+  $casa->servicios()->attach('1');
 
- 
+  
 
  /*
   $casa=App\Casa::find('118');
