@@ -372,7 +372,60 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
- 
+  $casa=new App\Casa();
+  $casa->zona_id='11';
+  $casa->calle='Gutierrez Zamora';
+  $casa->colonia='Las Aguilas';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='4900000';
+  $casa->supconst='122';
+  $casa->supterr='';
+  $casa->antiguedad='1 año';
+  $casa->recamara='2';
+  $casa->bano='2';
+  $casa->mediobano='0';
+  $casa->estacionamiento='2';
+  $casa->descripcion='Departamento para estrenar de 2 recamaras con opción a una tercera o family. Cuenta con área de lavado, cuarto de servicio, 
+  bodega, vigilancia 24 horas, roof garden común, a 5 min de periferico.';
+  $casa->estatus='1';
+  $casa->tipo='D';
+  $casa->estado_compra='V';
+  $casa->imagenes='15';
+  $casa->lat='19.358608';
+  $casa->long='-99.208543';
+  $casa->save(); 
+  $casa->ambientes()->attach([2,4,14,16,19,20,21,24]);
+  $casa->servicios()->attach('16');
+
+  $casa=new App\Casa();
+  $casa->zona_id='23';
+  $casa->calle='Ulises';
+  $casa->colonia='Lomas de Axomiatla';
+  $casa->municipio='Alvaro Obregón';
+  $casa->ciudad='Cd de Mexico';
+  $casa->estado='DF';
+  $casa->precio='8000000';
+  $casa->supconst='240';
+  $casa->supterr='300';
+  $casa->antiguedad='35 años';
+  $casa->recamara='3';
+  $casa->bano='3';
+  $casa->mediobano='1';
+  $casa->estacionamiento='3';
+  $casa->descripcion='Casa en calle con vigilancia 24 horas, remodelada. Recamara principal con vestidor y baño, las otras 2 recamaras comparten baño. 
+  Cocina integral, desayunador, bodega, área de lavado, cuarto de servicio, jardín de 100m2, con baño, asador, cisterna de 3,000Lts';
+  $casa->estatus='1';
+  $casa->tipo='C';
+  $casa->estado_compra='V';
+  $casa->imagenes='22';
+  $casa->lat='19.340669';
+  $casa->long='-99.250273';
+  $casa->save(); 
+  $casa->ambientes()->attach([3,4,6,15,16,19,20,23]);
+  $casa->servicios()->attach('19');
+ /*
   $casa=App\Casa::find('118');
   $casa->estatus= '0';
   $casa->save();
@@ -408,34 +461,9 @@ Route::get('/editar_casas', function()
   $casa->imagenes='9';
   $casa->save();
 
-/*
+
   
-  $casa=new App\Casa();
-  $casa->zona_id='44';
-  $casa->calle='Av de las Torres';
-  $casa->colonia='Col Torres del Potrero';
-  $casa->municipio='Alvaro Obregón';
-  $casa->ciudad='Cd de Mexico';
-  $casa->estado='DF';
-  $casa->precio='4550000';
-  $casa->supconst='140';
-  $casa->supterr='';
-  $casa->antiguedad='2 años';
-  $casa->recamara='2';
-  $casa->bano='2';
-  $casa->mediobano='1';
-  $casa->estacionamiento='2';
-  $casa->descripcion='Excelente departamento con vista espectacular. Opción a tercera recamara, sala de TV, cocina integral y área de lavado. Casa club con alberca,
-  salón de fiestas, sala para niños, sala jóvenes y sala adultos, jardín y 3 terrazas. Ubicado junto a Universidad Anahuac Sur y supervia poniente';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='V';
-  $casa->imagenes='18';
-  $casa->lat='19.330885';
-  $casa->long='-99.248423';
-  $casa->save(); 
-  $casa->ambientes()->attach([2,6,8,14,15,19]);
-  $casa->servicios()->attach('15');
+ 
 
 
 
@@ -477,30 +505,27 @@ Route::post('/crear_zona',function()
 
 Route::get('/editar_servicios', function()
 {
-    $servicio= App\Servicio::find(1);
-    $servicio->phone= '5510685454';
+    $servicio=new App\Servicio();
+    $servicio->name='Claudia Garcia';
+    $servicio->email='claudia@todoinmuebles.com.mx';
+    $servicio->phone='5554122358';
     $servicio->save();
+    
 
-    $servicio= App\Servicio::find(2);
-    $servicio->phone= '5516555831';
+    $servicio=new App\Servicio();
+    $servicio->name='Monica Puga';
+    $servicio->email='monica@todoinmuebles.com.mx';
+    $servicio->phone='5554193439';
     $servicio->save();
+   
 
-    $servicio= App\Servicio::find(3);
-    $servicio->phone= '5521097196';
-    $servicio->save();
-
-    $servicio= App\Servicio::find(4);
-    $servicio->phone= '5518340035';
-    $servicio->save();
-
-    $servicio= App\Servicio::find(5);
-    $servicio->phone= '5526903667';
-    $servicio->save();
-
-    $servicio= App\Servicio::find(6);
-    $servicio->phone= '5541354854';
+    $servicio=new App\Servicio();
+    $servicio->name='Elva Trujillo';
+    $servicio->email='elva@todoinmuebles.com.mx';
+    $servicio->phone='5554087482';
     $servicio->save();
     return 'Se edito';
+
 });
 
 Route::get('/editar_zona', function()
