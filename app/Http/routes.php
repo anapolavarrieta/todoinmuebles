@@ -374,36 +374,51 @@ Route::get('/editar_casas', function()
 {
 
 
+  $casa=App\Casa::find('131');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('132');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('133');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('134');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('135');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('136');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('137');
+  $casa->estatus= '0';
+  $casa->save();
+
+   $casa=App\Casa::find('138');
+  $casa->estatus= '0';
+  $casa->save();
  
+  $casa=App\Casa::find('139');
+  $casa->estatus= '0';
+  $casa->save();
 
+   $casa=App\Casa::find('140');
+  $casa->estatus= '0';
+  $casa->save();
 
+   $casa=App\Casa::find('141');
+  $casa->estatus= '0';
+  $casa->save();
 
-  $casa=new App\Casa();
-  $casa->zona_id='47';
-  $casa->calle='Miguel Negrete';
-  $casa->colonia='Niños Héroes';
-  $casa->municipio='Benito Juárez';
-  $casa->ciudad='Cd de Mexico';
-  $casa->estado='DF';
-  $casa->precio='1550000';
-  $casa->supconst='57';
-  $casa->supterr='';
-  $casa->antiguedad='1 año';
-  $casa->recamara='2';
-  $casa->bano='2';
-  $casa->mediobano='0';
-  $casa->estacionamiento='1';
-  $casa->descripcion='10 departamentos en preventa con balcón, sala, comedor, área de lavado, pisos de loseta, roof garden común, elevador, video portero';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='PV';
-  $casa->imagenes='12';
-  $casa->lat='19.386025';
-  $casa->long='-99.146607';
-  $casa->save(); 
-  $casa->ambientes()->attach([14,19,24,28]);
-  $casa->servicios()->attach('21');
- 
+   
 
   /*
 
