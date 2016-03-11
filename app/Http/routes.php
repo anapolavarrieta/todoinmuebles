@@ -372,36 +372,39 @@ Route::post('/crear_casa',function()
 
 Route::get('/editar_casas', function()
 {
+
+  $casa=App\Casa::find('128');
+  $casa->estatus= '0';
+  $casa->save();
+
   $casa=new App\Casa();
-  $casa->zona_id='45';
-  $casa->calle='Carretera al desierto de los leones';
-  $casa->colonia='Rancho San Francisco';
-  $casa->municipio='Alvaro Obregón';
+  $casa->zona_id='46';
+  $casa->calle='San Juan de Aragón';
+  $casa->colonia='DM Nacional';
+  $casa->municipio='Gustavo A. Madero';
   $casa->ciudad='Cd de Mexico';
   $casa->estado='DF';
-  $casa->precio='26500000';
-  $casa->supconst='860';
-  $casa->supterr='1265';
-  $casa->antiguedad='2 años';
-  $casa->recamara='4';
-  $casa->bano='4';
-  $casa->mediobano='1';
-  $casa->estacionamiento='8';
-  $casa->descripcion='Hermosa casa en condominio horizontal estilo artigas. 4 recamaras cada una con vestidor, tapanco de 60m2 que podría quedar de
-  5a recamara, family, cuarto de juegos con medio baño, estancia, cuarto de chofer, bodega, área de lavado, cuarto de servicio, cisterna, 
-  hidroneumático, calefacción hidrónica, jardín, planta de tratamiento para aguas jabonosas y uso de riego, chimenea, con acabados de madera salam, 
-  marmol, cantera, vigilancia las 24horas  ';
+  $casa->precio='1150000';
+  $casa->supconst='60';
+  $casa->supterr='';
+  $casa->antiguedad='8 años';
+  $casa->recamara='3';
+  $casa->bano='2';
+  $casa->mediobano='0';
+  $casa->estacionamiento='1';
+  $casa->descripcion='Departamento listo para habitar. CUenta con cocina integral, área de lavado, vigilancia 24 horas, camaras de seguridad, cancha 
+  de basket, juegos infantiles, cerca de zona comercial';
   $casa->estatus='1';
-  $casa->tipo='C';
+  $casa->tipo='D';
   $casa->estado_compra='V';
-  $casa->imagenes='28';
-  $casa->lat='19.339988';
-  $casa->long='-99.237281';
+  $casa->imagenes='6';
+  $casa->lat='19.479712';
+  $casa->long='-99.097924';
   $casa->save(); 
-  $casa->ambientes()->attach([3,4,10,12,18,19,20,22,23]);
-  $casa->servicios()->attach('1');
+  $casa->ambientes()->attach([4,6,14,19,21]);
+  $casa->servicios()->attach('20');
 
-  
+ 
 
  /*
   $casa=App\Casa::find('118');
