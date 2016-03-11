@@ -376,33 +376,7 @@ Route::get('/editar_casas', function()
 
  
 
-  $casa=new App\Casa();
-  $casa->zona_id='48';
-  $casa->calle='Carmen';
-  $casa->colonia='Nativitas';
-  $casa->municipio='Benito Juárez';
-  $casa->ciudad='Cd de Mexico';
-  $casa->estado='DF';
-  $casa->precio='1850000';
-  $casa->supconst='68';
-  $casa->supterr='';
-  $casa->antiguedad='1 año';
-  $casa->recamara='2';
-  $casa->bano='2';
-  $casa->mediobano='0';
-  $casa->estacionamiento='1';
-  $casa->descripcion='12 departamentos en preventa con balcón, sala, comedor, área de lavado, pisos de loseta, roof garden común, elevador, video portero';
-  $casa->estatus='1';
-  $casa->tipo='D';
-  $casa->estado_compra='PV';
-  $casa->imagenes='12';
-  $casa->lat='19.381309';
-  $casa->long='-99.135292';
-  $casa->save(); 
-  $casa->ambientes()->attach([14,19,24,28]);
-  $casa->servicios()->attach('9');
 
- /*
 
   $casa=new App\Casa();
   $casa->zona_id='47';
@@ -429,9 +403,9 @@ Route::get('/editar_casas', function()
   $casa->save(); 
   $casa->ambientes()->attach([14,19,24,28]);
   $casa->servicios()->attach('21');
-  $casa=App\Casa::find('118');
-  $casa->estatus= '0';
-  $casa->save();
+ 
+
+  /*
 
   $casa=App\Casa::find('119');
   $casa->estatus= '0';
