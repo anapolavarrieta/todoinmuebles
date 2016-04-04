@@ -14,7 +14,14 @@ class VerifyCsrfToken extends BaseVerifier {
 	 */
 	public function handle($request, Closure $next)
 	{
-		return parent::handle($request, $next);
-	}
+		 $response = $next($request);
+
+        if (last(explode('\\',get_class($response))) != 'RedirectResponse') {
+            $response->header('P3P', 'CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"');
+        }
+
+        return $response;
+    }
+	
 
 }
