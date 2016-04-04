@@ -374,11 +374,14 @@ Route::get('/editar_casas', function()
 {
 
 
-  $casa=App\Casa::find('125');
-  $casa->estatus= '0';
+  $casa=App\Casa::find('66');
+  $casa->precio= '6250000';
   $casa->save();
 
-  
+  $casa=App\Casa::find('114');
+  $casa->precio= '16700000';
+  $casa->save();
+
 
    
 
