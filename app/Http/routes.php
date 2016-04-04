@@ -374,49 +374,11 @@ Route::get('/editar_casas', function()
 {
 
 
-  $casa=App\Casa::find('131');
+  $casa=App\Casa::find('125');
   $casa->estatus= '0';
   $casa->save();
 
-   $casa=App\Casa::find('132');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('133');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('134');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('135');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('136');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('137');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('138');
-  $casa->estatus= '0';
-  $casa->save();
- 
-  $casa=App\Casa::find('139');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('140');
-  $casa->estatus= '0';
-  $casa->save();
-
-   $casa=App\Casa::find('141');
-  $casa->estatus= '0';
-  $casa->save();
+  
 
    
 
