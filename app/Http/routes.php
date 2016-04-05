@@ -373,6 +373,10 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
 
+$casa=App\Casa::find('144');
+  $casa->servicios()->attach(10);
+  $casa->save();
+  /*
  $casa = new App\Casa();
  $casa->zona_id='14';
  $casa->calle='Gonzalez de Cossio';
@@ -400,7 +404,7 @@ Route::get('/editar_casas', function()
  $casa->ambientes()->attach([6,10,15,19,26,28]);
  $casa->servicios()->attach(22);
  
-/*
+
   $casa=App\Casa::find('123');
   $casa->estatus= '1';
   $casa->save();
@@ -489,13 +493,13 @@ Route::post('/crear_zona',function()
 
 Route::get('/editar_servicios', function()
 {
-  
+  /*
     $servicio=new App\Servicio();
     $servicio->name='Jatziri';
     $servicio->email='jatziri@todoinmuebles.com.mx';
     $servicio->phone='5540191628';
     $servicio->save();
-    /*
+    
 
     $servicio=new App\Servicio();
     $servicio->name='Monica Puga';
