@@ -374,31 +374,33 @@ Route::get('/editar_casas', function()
 {
 
  $casa = new App\Casa();
- $casa->zona_id='12';
- $casa->calle='Av Centenario';
- $casa->colonia='Bosques de Tarango';
- $casa->municipio='Alvaro Obregón';
+ $casa->zona_id='14';
+ $casa->calle='Gonzalez de Cossio';
+ $casa->colonia='Del Valle';
+ $casa->municipio='Benito Juárez';
  $casa->ciudad='Cd de Mexico';
  $casa->estado='DF';
- $casa->precio='10000';
- $casa->supconst='8550';
- $casa->supterr='';
+ $casa->precio='8350000';
+ $casa->supconst='150';
+ $casa->supterr='110';
  $casa->antiguedad='';
- $casa->recamara='80';
- $casa->bano='105';
- $casa->mediobano='0';
- $casa->estacionamiento='0';
- $casa->descripcion='';
+ $casa->recamara='2';
+ $casa->bano='2';
+ $casa->mediobano='1';
+ $casa->estacionamiento='2';
+ $casa->descripcion='Casa con fachada catalogada, recamara principal con vestidor, sala de TV con balcón, cocina abierta con granito, estancia con pisos de madera y
+ chimenea, vitrales originales, cuarto de lavado, terraza con jardín y asador.';
  $casa->estatus='1';
- $casa->tipo='T';
+ $casa->tipo='C';
  $casa->estado_compra='V';
- $casa->imagenes='0';
- $casa->lat='19.351137';
- $casa->long='-99.249392';
+ $casa->imagenes='15';
+ $casa->lat='19.388347';
+ $casa->long='-99.170427';
  $casa->save(); 
-/* $casa->ambientes()->attach([14,19,24,28]);
- $casa->servicios()->attach('21');
-
+ $casa->ambientes()->attach([6,10,15,19,26,28]);
+ $casa->servicios()->attach(22);
+ 
+/*
   $casa=App\Casa::find('123');
   $casa->estatus= '1';
   $casa->save();
@@ -487,13 +489,13 @@ Route::post('/crear_zona',function()
 
 Route::get('/editar_servicios', function()
 {
-  /*
+  
     $servicio=new App\Servicio();
-    $servicio->name='Claudia Garcia';
-    $servicio->email='claudia@todoinmuebles.com.mx';
-    $servicio->phone='5554122358';
+    $servicio->name='Jatziri';
+    $servicio->email='jatziri@todoinmuebles.com.mx';
+    $servicio->phone='5540191628';
     $servicio->save();
-    
+    /*
 
     $servicio=new App\Servicio();
     $servicio->name='Monica Puga';
