@@ -373,37 +373,41 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
 
-$casa=App\Casa::find('144');
-  $casa->servicios()->attach(10);
-  $casa->save();
-  /*
+
+  
  $casa = new App\Casa();
- $casa->zona_id='14';
- $casa->calle='Gonzalez de Cossio';
- $casa->colonia='Del Valle';
+ $casa->zona_id='49';
+ $casa->calle='Filipinas';
+ $casa->colonia='Portales Sur';
  $casa->municipio='Benito Juárez';
  $casa->ciudad='Cd de Mexico';
  $casa->estado='DF';
- $casa->precio='8350000';
- $casa->supconst='150';
- $casa->supterr='110';
- $casa->antiguedad='';
- $casa->recamara='2';
- $casa->bano='2';
- $casa->mediobano='1';
- $casa->estacionamiento='2';
- $casa->descripcion='Casa con fachada catalogada, recamara principal con vestidor, sala de TV con balcón, cocina abierta con granito, estancia con pisos de madera y
- chimenea, vitrales originales, cuarto de lavado, terraza con jardín y asador.';
+ $casa->precio='2760000';
+ $casa->supconst='60';
+ $casa->supterr='0';
+ $casa->antiguedad='0 años';
+ $casa->recamara='1';
+ $casa->bano='1';
+ $casa->mediobano='0';
+ $casa->estacionamiento='1';
+ $casa->descripcion='Hermosos lofts para estrenar con terraza y cocina integral. Excelentes acabados, no hay elevador, vigilancia, en el corazón de la portales, vías
+ alternas';
  $casa->estatus='1';
- $casa->tipo='C';
+ $casa->tipo='D';
  $casa->estado_compra='V';
- $casa->imagenes='15';
- $casa->lat='19.388347';
- $casa->long='-99.170427';
+ $casa->imagenes='14';
+ $casa->lat='19.361627';
+ $casa->long='-99.148971';
  $casa->save(); 
- $casa->ambientes()->attach([6,10,15,19,26,28]);
+
+ $casa=App\Casa::find('145');
+ $casa->ambientes()->attach([4,6,7,21,26]);
  $casa->servicios()->attach(22);
- 
+
+ /*
+ $casa=App\Casa::find('144');
+  $casa->servicios()->attach(10);
+  $casa->save();
 
   $casa=App\Casa::find('123');
   $casa->estatus= '1';
