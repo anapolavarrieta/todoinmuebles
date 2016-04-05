@@ -375,14 +375,14 @@ Route::get('/editar_casas', function()
 
 
   
- $casa=App\Casa::find('145');
+ $casa = new App\Casa();
  $casa->zona_id='49';
  $casa->calle='Filipinas';
  $casa->colonia='Portales Sur';
  $casa->municipio='Benito Juárez';
  $casa->ciudad='Cd de Mexico';
  $casa->estado='DF';
- $casa->precio='2760000';
+ $casa->precio='2650000';
  $casa->supconst='60';
  $casa->supterr='0';
  $casa->antiguedad='0 años';
@@ -395,12 +395,14 @@ Route::get('/editar_casas', function()
  $casa->estatus='1';
  $casa->tipo='D';
  $casa->estado_compra='V';
- $casa->imagenes='14';
+ $casa->imagenes='9';
  $casa->lat='19.361627';
  $casa->long='-99.148971';
  $casa->save(); 
+
+ $casa=App\Casa::find('146');
  $casa->ambientes()->attach([4,6,7,21,26]);
- $casa->servicios()->attach(10);
+ $casa->servicios()->attach(22);
 
  /*
  $casa=App\Casa::find('144');
