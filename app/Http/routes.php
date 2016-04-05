@@ -373,7 +373,7 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
 
-
+/*
   
  $casa = new App\Casa();
  $casa->zona_id='49';
@@ -399,11 +399,12 @@ Route::get('/editar_casas', function()
  $casa->lat='19.361627';
  $casa->long='-99.148971';
  $casa->save(); 
+ $casa->ambientes()->attach([4,6,7,21,26]);
+ */
 
  $casa=App\Casa::find('146');
- $casa->ambientes()->attach([4,6,7,21,26]);
- $casa->servicios()->attach(22);
-
+ $casa->servicios()->attach(10);
+ $casa->save(); 
  /*
  $casa=App\Casa::find('144');
   $casa->servicios()->attach(10);
