@@ -76,7 +76,10 @@
 					<dt>Precio por m2 </dt>
 					@if ($casa->id == '40')
 					<dd> ${{ $english_format_number = number_format($casa->precio)}} USD</dd>
+					@else
+					<dd> ${{ $english_format_number = number_format($casa->precio)}}</dd>
 					@endif
+
 				@else
 					<dt>Precio </dt>
 					@if ($compra == 'preventa')

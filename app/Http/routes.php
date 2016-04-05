@@ -373,6 +373,31 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
 
+ $casa = new App\Casa();
+ $casa->zona_id='12';
+ $casa->calle='Av Centenario';
+ $casa->colonia='Bosques de Tarango';
+ $casa->municipio='Alvaro Obregón';
+ $casa->ciudad='Cd de Mexico';
+ $casa->estado='DF';
+ $casa->precio='10000';
+ $casa->supconst='8550';
+ $casa->supterr='';
+ $casa->antiguedad='';
+ $casa->recamara='80';
+ $casa->bano='105';
+ $casa->mediobano='0';
+ $casa->estacionamiento='0';
+ $casa->descripcion='';
+ $casa->estatus='1';
+ $casa->tipo='T';
+ $casa->estado_compra='V';
+ $casa->imagenes='0';
+ $casa->lat='19.351137';
+ $casa->long='-99.249392';
+ $casa->save(); 
+/* $casa->ambientes()->attach([14,19,24,28]);
+ $casa->servicios()->attach('21');
 
   $casa=App\Casa::find('123');
   $casa->estatus= '1';
@@ -380,7 +405,7 @@ Route::get('/editar_casas', function()
 
   $casa=App\Casa::find('124');
     $casa->estatus= '0';
-  $casa->save();
+  $casa->save();*/
 
 
    
