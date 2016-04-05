@@ -376,30 +376,30 @@ Route::get('/editar_casas', function()
 
   
  $casa = new App\Casa();
- $casa->zona_id='49';
- $casa->calle='Filipinas';
- $casa->colonia='Portales Sur';
- $casa->municipio='Benito Juárez';
- $casa->ciudad='Cd de Mexico';
- $casa->estado='DF';
- $casa->precio='4496000';
- $casa->supconst='92.3';
+ $casa->zona_id='50';
+ $casa->calle='Nuevo Tabachin';
+ $casa->colonia='Tlaltenango';
+ $casa->municipio='Cuernavaca';
+ $casa->ciudad='Cuernavaca';
+ $casa->estado='Morelos';
+ $casa->precio='1450000';
+ $casa->supconst='87';
  $casa->supterr='0';
  $casa->antiguedad='0 años';
- $casa->recamara='1';
+ $casa->recamara='2';
  $casa->bano='1';
- $casa->mediobano='0';
- $casa->estacionamiento='1';
- $casa->descripcion='Hermosos lofts para estrenar con terraza y cocina integral. Excelentes acabados, no hay elevador, vigilancia, en el corazón de la portales, vías
- alternas';
+ $casa->mediobano='1';
+ $casa->estacionamiento='2';
+ $casa->descripcion='Departamento pent garden que cuenta con jardín privado con terraza cubierta. El conjunto cuenta con alberca, jardín, salón de fiestas, 
+ asoleadero, planta tratadora de aguas negras y pluviales, cisterna, caldera solar, elevador, vigilancia 24 hrs. Son 24 departamentos';
  $casa->estatus='1';
  $casa->tipo='D';
  $casa->estado_compra='V';
- $casa->imagenes='38';
- $casa->lat='19.361627';
- $casa->long='-99.148971';
+ $casa->imagenes='18';
+ $casa->lat='18.946637';
+ $casa->long='-99.245672';
  $casa->save(); 
- $casa->ambientes()->attach([4,6,7,21,26]);
+ $casa->ambientes()->attach([3,4,8,14,23,26]);
  $casa->servicios()->attach(10);
  /*
 $casa = new App\Casa();
