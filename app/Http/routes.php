@@ -373,7 +373,15 @@ Route::post('/crear_casa',function()
 Route::get('/editar_casas', function()
 {
 
+$casa=App\Casa::find('148');
+ $casa->imagenes= '20';
+ $casa->save(); 
 
+
+$casa=App\Casa::find('145');
+ $casa->imagenes= '5';
+ $casa->save(); 
+/*
   
  $casa = new App\Casa();
  $casa->zona_id='50';
@@ -401,11 +409,9 @@ Route::get('/editar_casas', function()
  $casa->save(); 
  $casa->ambientes()->attach([3,4,8,14,23,26]);
  $casa->servicios()->attach(10);
- /*
+ 
 $casa = new App\Casa();
- $casa=App\Casa::find('146');
- $casa->servicios()->attach(10);
- $casa->save(); 
+ 
  /*
  $casa=App\Casa::find('144');
   $casa->servicios()->attach(10);
